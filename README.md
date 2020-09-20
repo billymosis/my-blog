@@ -33,4 +33,4 @@
 </p>
 
 
-<footer><strong>LOREM IPSUM EVERYONE!!!</strong></footer>
+<footer><strong>LOREM IPSUM !!!</strong></footer>
