@@ -1,6 +1,6 @@
 .postindex{
     padding-left: 35px;
-    padding-right: 300px;
+    padding-right: 5em;
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -8,4 +8,12 @@
 h3{
   margin: 0;
   padding: 0;  
+}
+
+@media only screen and (max-width: 600px) {
+  .postindex {
+    display: inline-block;
+    padding: 0px;
+    width: 100%;
+  }
 }
