@@ -20,7 +20,7 @@
   <ul>
   <li>Creating website for fun, some Cats picture 🐈</li>
   <li>For education purpose, everyone can learn 👨‍🎓</li>
-  <li>Mostly I will create article about how to integerate programming with our work as water resources engineer 🏗💦</li>
+  <li>Mostly I will create article about how to integerate programming with our work as Water Resources Engineer 🏗</li>
   <li>Most of my coverage will be open source software, fuck matlab 📚</li>
   <li>Ayone wants to add feel free to conctact 📞</li>
   </ul>
