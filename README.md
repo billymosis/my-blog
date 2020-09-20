@@ -12,7 +12,9 @@
   <h4>So anyone wants to add more content or modify how my blog looks are very welcome.</h4>
   
   Visit my deployed website on netlify
-  <a target="_blank" href="https://eloquent-roentgen-bbaf70.netlify.app/">https://eloquent-roentgen-bbaf70.netlify.app/</a>
+  <a target="_blank" href="https://eloquent-roentgen-bbaf70.netlify.app/">https://eloquent-roentgen-bbaf70.netlify.app/</a>.
+  
+  I have not buy domain yet 😜
   
   My plans are:
   <ul>
