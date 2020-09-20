@@ -60,12 +60,16 @@ nav ul {
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 425px) {
-  .layout {
+@media only screen and (max-width: 600px) {
+  .sidebar {
     display: inline-block;
     width: 100%;
-    padding: 0;
-    margin: 0;
-    min-width: 320px;
+    padding: 0px;
+    padding-top: 20px;
+    padding-left: 5px;
+  }
+
+  footer{
+    display: none;
   }
 }

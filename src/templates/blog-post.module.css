@@ -1,6 +1,6 @@
 .postarticle {
   padding-left: 35px;
-  padding-right: 300px;
+  padding-right: 5em;
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -40,9 +40,10 @@ hr {
   padding: 0px;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 600px) {
   .postarticle {
     display: inline-block;
+    padding: 0px;
     padding-left: 5px;
     width: 100%;
   }
