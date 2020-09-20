@@ -14,7 +14,7 @@ export default class BlogList extends React.Component {
     const isLast = currentPage === numPages
     const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1).toString()
     const nextPage = (currentPage + 1).toString()
-    console.dir(posts)
+
     return (
       <Layout>
         <SEO title="Home" />
@@ -52,11 +52,24 @@ export default class BlogList extends React.Component {
             )
           })}
           <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "space-between",
-            }}
+            style={
+              isFirst
+                ? {
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "space-between",
+                    margin: "5px",
+                    marginBottom: "30px",
+                    flexDirection: "row-reverse",
+                  }
+                : {
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "space-between",
+                    margin: "5px",
+                    marginBottom: "30px",
+                  }
+            }
           >
             {!isFirst && (
               <Link to={`/${prevPage}`} rel="prev">

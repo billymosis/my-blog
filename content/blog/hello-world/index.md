@@ -1,12 +1,17 @@
 ---
-title: Hello World
-date: "2015-05-01T22:12:03.284Z"
-description: "Hello World"
+title: Post Pertama 🐎 🌭
+date: "2020-09-20T17:24:03.284Z"
+description: ""
 ---
 
-This is my first post on my new fake blog! How exciting!
+Halo ini perkenalkan saya Billy.
+Untuk mengisi kebosenan saya mau nulis blog.
+Blog ini nantinya untuk edukasi saja.
 
-I'm sure I'll write a lot more interesting things in the future.
+Semoga ilmu di blog ini nantinya berguna bagi semua.
+mohon di share ya.
+channel youtube menyusul.
+
 
 Oh, and here's a great quote from this Wikipedia on
 [salted duck eggs](https://en.wikipedia.org/wiki/Salted_duck_egg).

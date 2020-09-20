@@ -25,7 +25,7 @@ const Postindex = () => {
       }
     }
   `)
-  console.dir(data)
+
   const posts = data.allMarkdownRemark.nodes
   if (posts.length === 0) {
     return (
@@ -75,6 +75,8 @@ const Postindex = () => {
           display: "flex",
           flexWrap: "wrap",
           flexDirection: "row-reverse",
+          margin: "5px",
+          marginBottom:"30px",
         }}
       >
         <Link  to={`/2`} rel="next">
