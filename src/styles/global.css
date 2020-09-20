@@ -1,15 +1,35 @@
-body {
+html body {
   margin: 0px;
   padding: 0px;
   font-family: Segoe UI;
-  
 }
 
-a:visited{
-text-decoration: none;
+a:visited {
+  text-decoration: none;
 }
 
 a {
   color: black;
-  text-decoration:none;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 1.25em;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
 }

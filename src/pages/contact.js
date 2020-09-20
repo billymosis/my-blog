@@ -11,6 +11,7 @@ const Contact = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Contact" />
       <Sidebar />
+      <p>Under Construction</p>
     </Layout>
   )
 }

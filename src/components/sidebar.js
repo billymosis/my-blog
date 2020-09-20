@@ -19,7 +19,7 @@ const Sidebar = () => {
 
   return (
     <div className={sideBarStyles.sidebar}>
-      <Bio />
+      <Bio className={sideBarStyles.bio}/>
       <nav>
         <ul>
           <li>
@@ -79,7 +79,7 @@ const Sidebar = () => {
         </ul>
       </div>
       <footer>
-        © {new Date().getFullYear()}, Built with
+        © {new Date().getFullYear()}, Built with ♥
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
       </footer>

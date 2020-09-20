@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Sidebar from "../components/sidebar"
-import postindexStyles from "../components/postindex.module.css"
+import bloglist from "./blog-list.module.css"
 
 export default class BlogList extends React.Component {
   render() {
@@ -19,7 +19,7 @@ export default class BlogList extends React.Component {
       <Layout>
         <SEO title="Home" />
         <Sidebar />
-        <main className={postindexStyles.postindex}>
+        <main className={bloglist.bloglist}>
           {posts.map(post => {
             const title = post.frontmatter.title || post.fields.slug
             return (
@@ -29,15 +29,14 @@ export default class BlogList extends React.Component {
                 itemType="http://schema.org/Article"
               >
                 <header>
-                  <h2>
+                  <h1>
                     <Link
-                      style={{ boxShadow: `none` }}
                       to={post.fields.slug}
                       itemProp="url"
                     >
                       <span itemProp="headline">{title}</span>
                     </Link>
-                  </h2>
+                  </h1>
                   <small>{post.frontmatter.date}</small>
                 </header>
                 <section>
@@ -51,26 +50,7 @@ export default class BlogList extends React.Component {
               </article>
             )
           })}
-          <div
-            style={
-              isFirst
-                ? {
-                    display: "flex",
-                    flexWrap: "wrap",
-                    justifyContent: "space-between",
-                    margin: "5px",
-                    marginBottom: "30px",
-                    flexDirection: "row-reverse",
-                  }
-                : {
-                    display: "flex",
-                    flexWrap: "wrap",
-                    justifyContent: "space-between",
-                    margin: "5px",
-                    marginBottom: "30px",
-                  }
-            }
-          >
+          <nav className={isFirst ? bloglist.reverse : bloglist.normal}>
             {!isFirst && (
               <Link to={`/${prevPage}`} rel="prev">
                 ← Previous Page
@@ -81,7 +61,14 @@ export default class BlogList extends React.Component {
                 Next Page →
               </Link>
             )}
-          </div>
+          </nav>
+          <footer className={bloglist.footermain}>
+            <a href="#top">Back to top!</a>
+            <p>
+              © {new Date().getFullYear()}, Built with ♥{` `}
+              <a href="https://www.gatsbyjs.com">Gatsby</a>
+            </p>
+          </footer>
         </main>
       </Layout>
     )

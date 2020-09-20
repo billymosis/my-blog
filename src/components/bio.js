@@ -11,7 +11,7 @@ import Image from "gatsby-image"
 
 import bioStyles from "./bio.module.css"
 
-const Bio = () => {
+const Bio = ({className}) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
@@ -40,7 +40,7 @@ const Bio = () => {
   const avatar = data?.avatar?.childImageSharp?.fixed
 
   return (
-    <div>
+    <div className={className}>
       {avatar && (
         <Link to={"/"} style={{ boxShadow: `none` }}>
           <Image

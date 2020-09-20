@@ -5,8 +5,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Sidebar from "../components/sidebar"
 
-
-
 import blogpostStyles from "./blog-post.module.css"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
@@ -24,8 +22,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <div className={blogpostStyles.postarticle}>
         <article itemScope itemType="http://schema.org/Article">
           <header>
-            <h1 itemProp="headline">{post.frontmatter.title}</h1>
-            <p className={blogpostStyles.date}>{post.frontmatter.date}</p>
+            <h1>
+              <span itemProp="headline">{post.frontmatter.title}</span>
+            </h1>
+            <small>{post.frontmatter.date}</small>
           </header>
           <section
             dangerouslySetInnerHTML={{ __html: post.html }}
@@ -35,15 +35,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         </article>
 
         <nav>
-          <ul
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
-            }}
-          >
+          <ul>
             <li>
               {previous && (
                 <Link to={previous.fields.slug} rel="prev">
@@ -60,6 +52,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             </li>
           </ul>
         </nav>
+        <footer className={blogpostStyles.footermain}>
+          <a href="#top">Back to top!</a>
+          <p>
+            © {new Date().getFullYear()}, Built with ♥{` `}
+            <a href="https://www.gatsbyjs.com">Gatsby</a>
+          </p>
+        </footer>
       </div>
     </Layout>
   )

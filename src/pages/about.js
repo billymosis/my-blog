@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Sidebar from "../components/sidebar"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
 const About = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
@@ -11,6 +12,7 @@ const About = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="About" />
       <Sidebar />
+      <p>Under Construction</p>
     </Layout>
   )
 }

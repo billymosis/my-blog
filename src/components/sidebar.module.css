@@ -2,7 +2,13 @@
   padding: 40px;
   display: inline-block;
   border-style: none solid none none;
-  border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) , #e6e6e6, rgba(0, 0, 0, 0)) 1 100%;
+  border-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      #e6e6e6,
+      rgba(0, 0, 0, 0)
+    )
+    1 100%;
 }
 
 footer {
@@ -48,7 +54,7 @@ footer {
 
 nav li {
   list-style-type: none;
-  margin: 10px 0;
+  margin-right: 10px;
 }
 
 nav ul {
@@ -56,8 +62,8 @@ nav ul {
   margin: 0;
 }
 
-.active{
-    text-decoration: underline;
+.active {
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 600px) {
@@ -68,8 +74,19 @@ nav ul {
     padding-top: 20px;
     padding-left: 5px;
   }
-
-  footer{
+  .bio {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+  nav li{
+    display: inline;
+  }
+  nav{
+    margin-bottom: 10px;
+  }
+  .logocontainer{
     display: none;
   }
 }

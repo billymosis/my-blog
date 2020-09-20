@@ -3,6 +3,7 @@
     margin-bottom: 0;
     border-radius: 100%;
     background-clip: padding-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .textauthor {
@@ -10,6 +11,7 @@
     font-weight: 600;
     line-height: 1.82813rem;
     margin: .8125rem 0;
+
 }
 
 .summarytext {
