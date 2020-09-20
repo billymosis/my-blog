@@ -7,7 +7,10 @@ import postindexStyles from "./postindex.module.css"
 const Postindex = () => {
   const data = useStaticQuery(graphql`
     query postindex {
-      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      allMarkdownRemark(
+        limit: 5
+        sort: { fields: [frontmatter___date], order: DESC }
+      ) {
         nodes {
           excerpt(pruneLength: 280)
           fields {
@@ -22,9 +25,8 @@ const Postindex = () => {
       }
     }
   `)
-
+  console.dir(data)
   const posts = data.allMarkdownRemark.nodes
-
   if (posts.length === 0) {
     return (
       <p>
@@ -68,6 +70,17 @@ const Postindex = () => {
           </article>
         )
       })}
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          flexDirection: "row-reverse",
+        }}
+      >
+        <Link  to={`/2`} rel="next">
+          Next Page →
+        </Link>
+      </div>
     </main>
   )
 }
