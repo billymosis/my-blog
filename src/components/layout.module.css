@@ -1,0 +1,6 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(150px, 300px) 1fr;
+  height: 100vh;
+}
+

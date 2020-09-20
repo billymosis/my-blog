@@ -1,0 +1,19 @@
+.author {
+    display: inline-block;
+    margin-bottom: 0;
+    border-radius: 100%;
+    background-clip: padding-box;
+}
+
+.textauthor {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.82813rem;
+    margin: .8125rem 0;
+}
+
+.summarytext {
+    color: #888;
+    line-height: 1.625rem;
+    margin-bottom: 1.625rem;
+}

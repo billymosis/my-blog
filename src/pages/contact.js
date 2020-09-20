@@ -1,24 +1,20 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
 import Sidebar from "../components/sidebar"
-import Postindex from "../components/postindex"
+import Layout from "../components/layout"
 
-const BlogIndex = ({ data, location }) => {
+const Contact = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
       <Sidebar />
-      <Postindex />
     </Layout>
   )
 }
 
-export default BlogIndex
+export default Contact
 
 export const pageQuery = graphql`
   query {

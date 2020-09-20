@@ -1,0 +1,15 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Segoe UI;
+  
+}
+
+a:visited{
+text-decoration: none;
+}
+
+a {
+  color: black;
+  text-decoration:none;
+}

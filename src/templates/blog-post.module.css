@@ -1,0 +1,41 @@
+.postarticle {
+  padding-left: 35px;
+  padding-right: 300px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 1.25em;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  border: none;
+  height: 3px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(230, 230, 230, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+
+.date{
+  margin:0px;
+  padding: 0px;
+}
