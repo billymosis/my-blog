@@ -12,7 +12,6 @@
 }
 
 footer {
-  color: #b6b6b6;
   font-size: 0.875rem;
   margin-top: 50px;
 }
@@ -31,7 +30,6 @@ footer {
   height: 1.5em;
   border: 0;
   display: flex;
-  fill: black;
 }
 .logoimg:hover {
   fill: darkslateblue;
@@ -49,7 +47,7 @@ footer {
   line-height: 2.1875rem;
   border-radius: 50%;
   text-align: center;
-  border: 1px solid #ebebeb;
+  border: 1px solid;
 }
 
 nav li {
@@ -80,13 +78,13 @@ nav ul {
   footer {
     display: none;
   }
-  nav li{
+  nav li {
     display: inline;
   }
-  nav{
+  nav {
     margin-bottom: 10px;
   }
-  .logocontainer{
+  .logocontainer {
     display: none;
   }
 }

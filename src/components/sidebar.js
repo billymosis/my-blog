@@ -1,10 +1,65 @@
+/** @jsx jsx */
+
 import React from "react"
 import Bio from "./bio"
 import { Link } from "gatsby"
-
+import { useColorMode, jsx } from "theme-ui"
 import sideBarStyles from "./sidebar.module.css"
 
+const modes = ["light", "black", "dark", "deep", "hack", "pink"]
+const ColorButton = ({ mode, ...props }) => (
+  <button
+    {...props}
+    title="Cycle Color Mode"
+    sx={{
+      display: "inline-block",
+      appearance: "none",
+      bg: "transparent",
+      color: "inherit",
+      p: 1,
+      m: 0,
+      border: 0,
+      borderRadius: 9999,
+      ":hover,:focus": {
+        boxShadow: "0 0 0 3px",
+        outline: "none",
+      },
+    }}
+  >
+    <svg
+      viewBox="0 0 32 32"
+      width="24"
+      height="24"
+      fill="currentcolor"
+      sx={{
+        display: "block",
+      }}
+    >
+      <circle
+        cx="16"
+        cy="16"
+        r="14"
+        fill="none"
+        stroke="currentcolor"
+        strokeWidth="4"
+      />
+      <path
+        d={`
+          M 16 0
+          A 16 16 0 0 0 16 32
+          z
+        `}
+      />
+    </svg>
+  </button>
+)
 const Sidebar = () => {
+  const [mode, setMode] = useColorMode()
+  const cycleMode = e => {
+    const i = modes.indexOf(mode)
+    const n = (i + 1) % modes.length
+    setMode(modes[n])
+  }
   const linkedin =
     "M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
 
@@ -19,7 +74,7 @@ const Sidebar = () => {
 
   return (
     <div className={sideBarStyles.sidebar}>
-      <Bio className={sideBarStyles.bio}/>
+      <Bio className={sideBarStyles.bio} />
       <nav>
         <ul>
           <li>
@@ -28,22 +83,33 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link activeClassName={sideBarStyles.active} to={"/about"}>About me</Link>
+            <Link activeClassName={sideBarStyles.active} to={"/about"}>
+              About me
+            </Link>
           </li>
           <li>
-            <Link activeClassName={sideBarStyles.active} to={"/contact"}>Contact me</Link>
+            <Link activeClassName={sideBarStyles.active} to={"/contact"}>
+              Contact me
+            </Link>
           </li>
         </ul>
       </nav>
       <div>
-        <ul className={sideBarStyles.logocontainer}>
+        <ul
+          className={sideBarStyles.logocontainer}
+          sx={{ borderColor: "gray" }}
+        >
           <li className={sideBarStyles.logolist}>
             <a
               href="https://linkedin.com/in/billymosis"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <svg className={sideBarStyles.logoimg} viewBox="0 0 24 30">
+              <svg
+                className={sideBarStyles.logoimg}
+                sx={{ fill: "text" }}
+                viewBox="0 0 24 30"
+              >
                 <title>linkedin</title>
                 <path d={linkedin}></path>
               </svg>
@@ -55,7 +121,7 @@ const Sidebar = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <svg className={sideBarStyles.logoimg} viewBox="0 0 512 512">
+              <svg className={sideBarStyles.logoimg} sx={{ fill: "text" }} viewBox="0 0 512 512">
                 <title>email</title>
                 <g>
                   <path d={email1} />
@@ -70,17 +136,19 @@ const Sidebar = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <svg className={sideBarStyles.logoimg} viewBox="0 0 26 28">
+              <svg className={sideBarStyles.logoimg} sx={{ fill: "text" }} viewBox="0 0 26 28">
                 <title>twitter</title>
                 <path d={twitter}></path>
               </svg>
             </a>
           </li>
+          <li className={sideBarStyles.logolist}>
+            <ColorButton mode={mode} onClick={cycleMode} />
+          </li>
         </ul>
       </div>
       <footer>
-        © {new Date().getFullYear()}, Built with ♥
-        {` `}
+        © {new Date().getFullYear()}, Built with ♥{` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
       </footer>
     </div>
