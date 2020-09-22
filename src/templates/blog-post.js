@@ -1,3 +1,6 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui"
+
 import React from "react"
 import { Link, graphql } from "gatsby"
 
@@ -5,21 +8,35 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Sidebar from "../components/sidebar"
 
-import blogpostStyles from "./blog-post.module.css"
-
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = pageContext
-
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <Sidebar />
-      <div className={blogpostStyles.postarticle}>
+      <aside
+        sx={{
+          flexGrow: 1,
+          flexBasis: "sidebar",
+        }}
+      >
+        <Sidebar />
+      </aside>
+      <main
+        sx={{
+          flexGrow: 99999,
+          flexBasis: 0,
+          minWidth: 320,
+          paddingLeft: 4,
+          borderStyle: "none none none solid",
+          borderImage:
+            "linear-gradient(to bottom,rgba(0, 0, 0, 0),#e6e6e6,rgba(0, 0, 0, 0)) 1 100%",
+        }}
+      >
         <article itemScope itemType="http://schema.org/Article">
           <header>
             <h1>
@@ -52,14 +69,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             </li>
           </ul>
         </nav>
-        <footer className={blogpostStyles.footermain}>
-          <a href="#top">Back to top!</a>
-          <p>
-            © {new Date().getFullYear()}, Built with ♥{` `}
-            <a href="https://www.gatsbyjs.com">Gatsby</a>
-          </p>
-        </footer>
-      </div>
+      </main>
     </Layout>
   )
 }
