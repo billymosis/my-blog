@@ -1,17 +1,11 @@
-/**
- * Bio component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
+/** @jsx jsx */
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Image from "gatsby-image"
 
-import bioStyles from "./bio.module.css"
+import { jsx } from "theme-ui"
 
-const Bio = ({className}) => {
+const Bio = ({ className }) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
@@ -40,20 +34,20 @@ const Bio = ({className}) => {
   const avatar = data?.avatar?.childImageSharp?.fixed
 
   return (
-    <div className={className}>
+    <div>
       {avatar && (
-        <Link to={"/"} style={{ boxShadow: `none` }}>
-          <Image
-            fixed={avatar}
-            alt={author?.name || ``}
-            className={bioStyles.author}
-          />
+        <Link to={"/"}>
+          <Image fixed={avatar} sx={{borderRadius:5,boxShadow:"-1px 1px 6px 0px rgba(50, 50, 50, 0.75)"}}alt={author?.name || ``} />
         </Link>
       )}
       {author?.name && (
         <div>
-          <h1 className={bioStyles.textauthor}>{author.name}</h1>
-          <small><p className={bioStyles.summarytext}>{author?.summary || null}</p></small>
+          <h1>{author.name}</h1>
+          <small>
+            <em>
+            <p>{author?.summary || null}</p>
+            </em>
+          </small>
         </div>
       )}
     </div>
