@@ -8,7 +8,7 @@
 </h1>
 <p>
   
-  <h3>Created with gatsby starter blog template, and my creativity lol 😂.</h3>
+  <h3>Created with gatsby starter blog template, and my copas creativity lol 😂.</h3>
   <h4>So anyone wants to add more content or modify how my blog looks are very welcome.</h4>
   
   Visit my deployed website on netlify
