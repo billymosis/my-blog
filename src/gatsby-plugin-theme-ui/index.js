@@ -2,11 +2,12 @@ import prism from "@theme-ui/prism/presets/theme-ui"
 
 export default {
   initialColorModeName: "light",
-  breakpoints: ["16em", "32em", "40em", "56em"],
+  breakpoints: ["768px", "1024px", "1440px", "2560px"],
   colors: {
     text: "#000",
     background: "#fff",
-    primary: "hsl(240, 100%, 57%)",
+    primary: "lightblue",
+
     secondary: "hsl(260, 100%, 57%)",
     accent: "hsl(280, 100%, 57%)",
     muted: "#696969",
@@ -60,6 +61,20 @@ export default {
       },
     },
   },
+  cards: {
+/*     primary: {
+      padding: 2,
+      borderRadius: 4,
+      boxShadow: '0 0 8px rgba(0, 0, 0, 0.125)',
+    },
+    compact: {
+      padding: 1,
+      borderRadius: 2,
+      border: '1px solid',
+      borderColor: 'muted',
+    }, */
+  },
+
   buttons: {
     primary: {
       color: 'background',

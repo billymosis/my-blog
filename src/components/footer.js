@@ -6,9 +6,9 @@ import {
   FaAt as At,
 } from "react-icons/fa"
 
-import { jsx, Styled, useColorMode } from "theme-ui"
-import React from "react"
-import { Link } from "gatsby"
+
+import { jsx, useColorMode } from "theme-ui"
+
 import { ColorButton } from "./sidebar"
 
 const modes = ["light", "black", "dark", "deep", "hack", "pink"]
