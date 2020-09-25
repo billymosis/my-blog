@@ -29,7 +29,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           flexGrow: 99999,
           flexBasis: 0,
           minWidth: 320,
-          paddingLeft: 4,
+          px: 4,
           borderStyle: "none none none solid",
           borderImage:
             "linear-gradient(to bottom,rgba(0, 0, 0, 0),#e6e6e6,rgba(0, 0, 0, 0)) 1 100%",
