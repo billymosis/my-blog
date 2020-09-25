@@ -36,13 +36,13 @@ const Layout = ({ children }) => {
             alignItems: "center",
             variant: "styles.header",
             boxShadow: "5",
+            p:4,
           }}
         >
           <Link
             to="/"
             sx={{
               variant: "styles.navlink",
-              pl: 4,
             }}
           >
             <strong>
@@ -54,7 +54,6 @@ const Layout = ({ children }) => {
             to="/about"
             sx={{
               variant: "styles.navlink",
-              p: 2,
             }}
           >
             About
