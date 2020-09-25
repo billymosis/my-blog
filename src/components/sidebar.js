@@ -1,9 +1,8 @@
 /** @jsx jsx */
 
-import React from "react"
 import Bio from "./bio"
 import { Link } from "gatsby"
-import { useColorMode, jsx, Box, Flex, Styled } from "theme-ui"
+import { useColorMode, jsx, Box, Styled } from "theme-ui"
 
 const modes = ["light", "black", "dark", "deep", "hack", "pink"]
 export const ColorButton = ({ mode, ...props }) => (
@@ -22,6 +21,7 @@ export const ColorButton = ({ mode, ...props }) => (
         boxShadow: "0 0 0 3px",
         outline: "none",
       },
+      cursor:"pointer",
     }}
   >
     <svg

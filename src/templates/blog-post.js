@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 
-import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -51,23 +50,24 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <hr />
         </article>
 
-        <nav>
-          <ul>
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
+        <nav
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+          }}
+        >
+          {previous && (
+            <Link to={previous.fields.slug} rel="prev">
+              ← {previous.frontmatter.title}
+            </Link>
+          )}
+
+          {next && (
+            <Link to={next.fields.slug} rel="next">
+              {next.frontmatter.title} →
+            </Link>
+          )}
         </nav>
       </main>
     </Layout>
