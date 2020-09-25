@@ -7,6 +7,7 @@ export default {
     text: "#000",
     background: "#fff",
     primary: "lightblue",
+
     secondary: "hsl(260, 100%, 57%)",
     accent: "hsl(280, 100%, 57%)",
     muted: "#696969",
@@ -73,6 +74,7 @@ export default {
       borderColor: 'muted',
     }, */
   },
+
   buttons: {
     primary: {
       color: 'background',

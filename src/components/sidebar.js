@@ -4,6 +4,7 @@ import Bio from "./bio"
 import { Link } from "gatsby"
 import { useColorMode, jsx, Box, Styled } from "theme-ui"
 
+
 const modes = ["light", "black", "dark", "deep", "hack", "pink"]
 export const ColorButton = ({ mode, ...props }) => (
   <button

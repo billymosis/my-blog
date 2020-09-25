@@ -1,6 +1,8 @@
 /** @jsx jsx */
+
 import { jsx } from "theme-ui"
 import Footer from "./footer"
+
 import { Link } from "gatsby"
 
 const Layout = ({ children }) => {

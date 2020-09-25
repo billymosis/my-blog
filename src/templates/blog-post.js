@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"

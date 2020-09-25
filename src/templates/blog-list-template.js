@@ -1,4 +1,5 @@
 /** @jsx jsx */
+
 import { jsx, Card } from "theme-ui"
 
 import { graphql, Link } from "gatsby"
@@ -14,7 +15,9 @@ const BlogList = ({ data, pageContext, location }) => {
   const isLast = currentPage === numPages
   const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1).toString()
   const nextPage = (currentPage + 1).toString()
+
   const isRoot = location.pathname === "/" ? true : false
+
 
   return (
     <Layout location={location} title={siteTitle}>

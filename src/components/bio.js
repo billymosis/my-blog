@@ -1,4 +1,5 @@
 /** @jsx jsx */
+
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Image from "gatsby-image"
 
@@ -36,6 +37,7 @@ const Bio = ({ className }) => {
     <div>
       {avatar && (
         <Link to={"/"}>
+
           <Image
             fixed={avatar}
             sx={{
@@ -47,6 +49,7 @@ const Bio = ({ className }) => {
             }}
             alt={author?.name || ``}
           />
+
         </Link>
       )}
       {author?.name && (
@@ -54,7 +57,9 @@ const Bio = ({ className }) => {
           <h1>{author.name}</h1>
           <small>
             <em>
+
               <p>{author?.summary || null}</p>
+
             </em>
           </small>
         </div>
