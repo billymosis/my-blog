@@ -5,7 +5,7 @@ module.exports = {
       name: `Billy Mosis Priambodo`,
       summary: `Water Resources Engineer who likes to code`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Blog untuk senang-senang saja. Bakal share tentang teknologi, tutorial, dan fun things.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
       twitter: `billymosis`,
@@ -34,6 +34,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
+              showCaptions: true,
             },
           },
           {

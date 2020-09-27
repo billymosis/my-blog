@@ -7,10 +7,9 @@ export default {
     text: "#000",
     background: "#fff",
     primary: "lightblue",
-
     secondary: "hsl(260, 100%, 57%)",
     accent: "hsl(280, 100%, 57%)",
-    muted: "#696969",
+    muted: "#222",
     gray: "rgba(207,203,203,60%)",
     modes: {
       black: {
@@ -62,7 +61,7 @@ export default {
     },
   },
   cards: {
-/*     primary: {
+    /*     primary: {
       padding: 2,
       borderRadius: 4,
       boxShadow: '0 0 8px rgba(0, 0, 0, 0.125)',
@@ -77,16 +76,16 @@ export default {
 
   buttons: {
     primary: {
-      color: 'background',
-      bg: 'primary',
+      color: "background",
+      bg: "primary",
     },
     secondary: {
-      color: 'background',
-      bg: 'secondary',
+      color: "background",
+      bg: "secondary",
     },
     gray: {
-      color: 'muted',
-      bg: 'gray',
+      color: "muted",
+      bg: "gray",
     },
   },
   fonts: {
@@ -134,7 +133,7 @@ export default {
       transitionProperty: "background-color",
       transitionTimingFunction: "ease-out",
       transitionDuration: ".4s",
-      p:{
+      p: {
         my: 1,
       },
       a: {
@@ -150,12 +149,13 @@ export default {
       },
       h2: {
         variant: "text.heading",
-        mt: 5,
+        mt: 4,
         mb: 3,
+        fontSize: 1,
       },
       h3: {
         variant: "text.heading",
-        fontSize: 2,
+        fontSize: 0,
       },
       h4: {
         variant: "text.heading",
@@ -239,6 +239,11 @@ export default {
         display: ["none", "none", "block"],
       },
 
+      figcaption: {
+        textAlign: "center",
+        fontStyle: "italic",
+        fontSize: "small",
+      },
     },
     ul: {
       listStyleType: "none",
