@@ -5,8 +5,8 @@ module.exports = {
       name: `Billy Mosis Priambodo`,
       summary: `Water Resources Engineer who likes to code`,
     },
-    description: `Blog untuk senang-senang saja. Bakal share tentang teknologi, tutorial, dan fun things.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    description: `Blog untuk senang-senang saja. Bakal share tentang teknologi, tutorial, dan seneng-seneng. Water Resource Engineer 64 monggo kumpul.`,
+    siteUrl: `https://billymosis.com/`,
     social: {
       twitter: `billymosis`,
     },
@@ -61,17 +61,18 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Billy Mosis Blog`,
+        short_name: `billymosis`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#ffffff`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-theme-ui',
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

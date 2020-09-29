@@ -8,7 +8,7 @@ Maka dari itu, saya akan perkenalkan bahasa pemograman terlebih dahulu sebelum l
 
 
 ## Pilih yang mana?
-Kalau dulu saat kuliah di Teknik Pengairan kita diajarkan Fortran, untuk skirpsi biasanya ganti ke yang lebih scientific yaitu matlab untuk perhitungan hidrologi ada yang pakai neural network. Untuk Python ga pernah dikenalin saat kuliah. Ketiga bahasa pemograman ini mempunyai kelebihan dan kekurangan masing-masing. Berikut pendapat saya dan contoh untuk penulisan "Hello, world" untuk masing-masing bahasa: 
+Kalau dulu saat kuliah di Teknik Pengairan kita diajarkan Fortran, untuk skirpsi biasanya ganti ke yang lebih scientific yaitu matlab untuk perhitungan hidrologi contohnya ada yang pakai artificial neural network. Untuk Python ga pernah dikenalin saat kuliah. Ketiga bahasa pemograman ini mempunyai kelebihan dan kekurangan masing-masing. Berikut pendapat saya dan contoh untuk penulisan "Hello, world" untuk masing-masing bahasa: 
 
 * Fortran
 
