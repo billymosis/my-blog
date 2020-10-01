@@ -1,7 +1,7 @@
 ---
 title: Python untuk Pengairan
-date: "2020-09-26T17:24:03.284Z"
-description: "Halo teman - teman, blog ini nanti arahnya akan ke programming open source. Maka dari itu, saya akan perkenalkan bahasa pemograman terlebih dahulu sebelum lanjut ke postingan selanjutnya."
+date: "2020-09-26T00:00:00.000Z"
+description: "Halo teman - teman, blog ini nanti arahnya akan ke programming open source. Maka dari itu, saya akan perkenalkan bahasa pemograman terlebih dahulu sebelum lanjut ke bahasan selanjutnya."
 ---
 Halo teman - teman, blog ini nanti arahnya akan ke programming open source.
 Maka dari itu, saya akan perkenalkan bahasa pemograman terlebih dahulu sebelum lanjut ke postingan selanjutnya.

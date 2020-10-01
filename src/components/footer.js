@@ -6,7 +6,6 @@ import {
   FaAt as At,
 } from "react-icons/fa"
 
-
 import { jsx, useColorMode } from "theme-ui"
 
 import { ColorButton } from "./sidebar"
@@ -77,7 +76,12 @@ const Footer = () => {
           fontSize: 0,
         }}
       >
-        <div sx={{ mx: "auto", paddingBottom: 2 }}>© 2020 Billy Mosis</div>
+        <div sx={{ mx: "auto", paddingBottom: 2, color:"gray" }}>
+          © 2020 Billy Mosis made with
+          <a target="_blank" rel="noreferrer" href="https://www.gatsbyjs.org/">
+          &nbsp;Gatsby
+          </a>
+        </div>
         <ColorButton
           sx={{ display: ["block", "block", "none"] }}
           mode={mode}

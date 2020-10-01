@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "billy-blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Blog untuk senang-senang saja. Bakal share tentang teknologi, tutorial, dan seneng-seneng. Water Resource Engineer 64 monggo kumpul.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Billy Mosis Priambodo <edo.billy@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "billymosis.com"
   },
   "dependencies": {
     "@theme-ui/presets": "^0.3.0",
