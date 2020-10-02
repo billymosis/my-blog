@@ -4,6 +4,7 @@ import {
   FaTwitter as Twitter,
   FaGithub as GitHub,
   FaAt as At,
+  FaLinkedin as In,
 } from "react-icons/fa"
 
 import { jsx, useColorMode } from "theme-ui"
@@ -65,6 +66,16 @@ const Footer = () => {
           }}
         >
           <At size={24} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/billymosis/"
+          title="Linked In"
+          sx={{
+            variant: "styles.navitem",
+            mx: 2,
+          }}
+        >
+          <In size={24} />
         </a>
       </div>
       <div

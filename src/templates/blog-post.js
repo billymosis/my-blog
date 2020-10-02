@@ -24,17 +24,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       >
         <Sidebar />
       </aside>
-      <main
-        sx={{
-          flexGrow: 99999,
-          flexBasis: 0,
-          minWidth: 320,
-          px: 4,
-          borderStyle: "none none none solid",
-          borderImage:
-            "linear-gradient(to bottom,rgba(0, 0, 0, 0),#e6e6e6,rgba(0, 0, 0, 0)) 1 100%",
-        }}
-      >
+      <main>
         <article itemScope itemType="http://schema.org/Article">
           <header>
             <h1>

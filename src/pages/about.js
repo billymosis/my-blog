@@ -13,7 +13,27 @@ const About = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="About" />
-      <Sidebar />
+      <aside
+        sx={{
+          flexGrow: 1,
+          flexBasis: "sidebar",
+        }}
+      >
+        <Sidebar />
+      </aside>
+      <main>
+        <article>
+          <p>
+            Halo perkenalkan, saya Billy Mosis Priambodo. Saya menempuh
+            pendidikan Water Resources Engineering, Teknik Pengairan di
+            Universitas Brawijaya Malang. Engineering, IT, dan games adalah 3
+            hal yang mungkin teman-teman saya pikir jika mengenal saya. Skill
+            saya masih cupu. Belum ada research paper, product, talks, dan
+            achievement. Jadi saya masih belum bisa pamer guys.
+          </p>
+          <p sx={{ mt: 5 }}>Sekian perkenalan dari saya.</p>
+        </article>
+      </main>
     </Layout>
   )
 }

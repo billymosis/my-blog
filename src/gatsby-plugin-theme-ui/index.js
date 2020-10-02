@@ -244,6 +244,15 @@ export default {
         fontStyle: "italic",
         fontSize: "small",
       },
+      main: {
+        flexGrow: 99999,
+        flexBasis: 0,
+        minWidth: 320,
+        px: 4,
+        borderStyle: "none none none solid",
+        borderImage:
+          "linear-gradient(to bottom,rgba(0, 0, 0, 0),#e6e6e6,rgba(0, 0, 0, 0)) 1 100%",
+      }
     },
     ul: {
       listStyleType: "none",

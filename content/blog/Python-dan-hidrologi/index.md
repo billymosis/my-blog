@@ -1,5 +1,5 @@
 ---
-title: Python untuk Pengairan
+title: Python dan Hidrologi
 date: "2020-09-26T00:00:00.000Z"
 description: "Halo teman - teman, blog ini nanti arahnya akan ke programming open source. Maka dari itu, saya akan perkenalkan bahasa pemograman terlebih dahulu sebelum lanjut ke bahasan selanjutnya."
 ---
@@ -22,6 +22,7 @@ Kalau dulu saat kuliah di Teknik Pengairan kita diajarkan Fortran, untuk skirpsi
 * Matlab
 
     Untuk matlab ini karena dia aplikasi berbayar dan sizenya besar, perlu komputer yang performnya tinggi saya agak kurang suka, tapi library dia untuk scientific oke punya.
+
     ```matlab
     disp('Hello, world')
     ```
@@ -29,6 +30,7 @@ Kalau dulu saat kuliah di Teknik Pengairan kita diajarkan Fortran, untuk skirpsi
 * Python
 
     Dan yang terakhir untuk python ini library yang banyak, install-nya gampang, size kecil, modern dan digemari banyak orang, buat apa saja bisa! Berikut ini syntax untuk python versi 3 ya bukan 2.
+    
     ```python
     print("Hello, world")
     ```

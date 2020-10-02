@@ -3,7 +3,7 @@ module.exports = {
     title: `Billy Blog`,
     author: {
       name: `Billy Mosis Priambodo`,
-      summary: `Water Resources Engineer who likes to code`,
+      summary: `Water Resources Engineer who love to code`,
     },
     description: `Blog untuk senang-senang saja. Bakal share tentang teknologi, tutorial, dan seneng-seneng. Water Resource Engineer 64 monggo kumpul.`,
     siteUrl: `https://billymosis.com/`,
