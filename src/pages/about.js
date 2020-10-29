@@ -1,51 +1,31 @@
-/** @jsx jsx */
-import { graphql } from "gatsby"
-
-import Sidebar from "../components/sidebar"
-import Layout from "../components/layout"
+import { Link, graphql } from "gatsby"
+import React from "react"
 import SEO from "../components/seo"
+import { Layout } from "../components/layout"
+import CardPost from "../components/cardpost"
 
-import { jsx } from "theme-ui"
-
-const About = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-
+export default function About({}) {
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout>
       <SEO title="About" />
-      <aside
-        sx={{
-          flexGrow: 1,
-          flexBasis: "sidebar",
-        }}
-      >
-        <Sidebar />
-      </aside>
       <main>
         <article>
-          <p>
-            Halo perkenalkan, saya Billy Mosis Priambodo. Saya menempuh
-            pendidikan Water Resources Engineering, Teknik Pengairan di
-            Universitas Brawijaya Malang. Engineering, IT, dan games adalah 3
-            hal yang mungkin teman-teman saya pikir jika mengenal saya. Skill
-            saya masih cupu. Belum ada research paper, product, talks, dan
-            achievement. Jadi saya masih belum bisa pamer guys.
-          </p>
-          <p sx={{ mt: 5 }}>Sekian perkenalan dari saya.</p>
+          <div className="h-screen flex flex-col justify-center">
+            <h1 className="font-bold font-sans break-normal text-gray-900 pb-2 text-3xl md:text-4xl">
+              Hello!👋
+            </h1>
+            <h2 className="font-normal font-sans break-normal text-gray-900 pt-6 pb-2 text-xl md:text-2xl">
+              Halo perkenalkan, saya Billy Mosis Priambodo. Saya menempuh
+              pendidikan Water Resources Engineering, Teknik Pengairan di
+              Universitas Brawijaya Malang. Engineering, IT, dan games adalah 3
+              hal yang mungkin teman-teman saya pikir jika mengenal saya. Skill
+              saya masih cupu. Belum ada research paper, product, talks, dan
+              achievement. Jadi saya masih belum bisa pamer guys.
+            </h2>
+            <p>Sekian perkenalan dari saya.</p>
+          </div>
         </article>
       </main>
     </Layout>
   )
 }
-
-export default About
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

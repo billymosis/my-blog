@@ -35,6 +35,7 @@ module.exports = {
             options: {
               maxWidth: 590,
               showCaptions: true,
+              wrapperStyle: `text-align: center;`,
             },
           },
           {
@@ -43,10 +44,22 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
+          {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+              path: `${__dirname}/content/blog`,
+            },
+          },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-postcss",
+      options: {
+        postCssPlugins: [require("tailwindcss")("./tailwind.config.js")],
       },
     },
     `gatsby-transformer-sharp`,
@@ -71,7 +84,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    "gatsby-plugin-theme-ui",
     `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-robots-txt",

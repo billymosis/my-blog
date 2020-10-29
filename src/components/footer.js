@@ -1,5 +1,4 @@
-/** @jsx jsx */
-
+import React from "react"
 import {
   FaTwitter as Twitter,
   FaGithub as GitHub,
@@ -7,86 +6,48 @@ import {
   FaLinkedin as In,
 } from "react-icons/fa"
 
-import { ColorButton } from "./sidebar"
-
-const Footer = () => {
-  const [mode, setMode] = useColorMode()
-  const cycleMode = e => {
-    const i = modes.indexOf(mode)
-    const n = (i + 1) % modes.length
-    setMode(modes[n])
-  }
+export default function Footer() {
   return (
-    <footer
-      
-    >
-      <div
-       
-      >
-        <a
-          href="https://twitter.com/billymosis"
-          title="Twitter"
-          sx={{
-            variant: "styles.navitem",
-            mx: 2,
-          }}
-        >
-          <Twitter size={24} />
-        </a>
-        <a
-          href="https://github.com/billymosis"
-          title="GitHub"
-          sx={{
-            variant: "styles.navitem",
-            mx: 2,
-          }}
-        >
-          <GitHub size={24} />
-        </a>
-        <a
-          href="mailto:edo.billy@gmail.com"
-          title="Email"
-          sx={{
-            variant: "styles.navitem",
-            mx: 2,
-          }}
-        >
-          <At size={24} />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/billymosis/"
-          title="Linked In"
-          sx={{
-            variant: "styles.navitem",
-            mx: 2,
-          }}
-        >
-          <In size={24} />
-        </a>
-      </div>
-      <div
-        sx={{
-          display: "flex",
-          flexWrap: "wrap",
-          flexDirection: "column",
-          alignItems: "center",
-          fontSize: 0,
-        }}
-      >
-        <div sx={{ mx: "auto", paddingBottom: 2, color:"gray" }}>
-          © 2020 Billy Mosis made with
-          <a target="_blank" rel="noreferrer" href="https://www.gatsbyjs.org/">
-          &nbsp;Gatsby
-          </a>
+    <footer className="bg-white border-t border-gray-400 shadow">
+      <div className="container max-w-6xl mx-auto flex py-8 ">
+        <div className="w-full mx-auto flex flex-wrap">
+          <div className="flex w-full md:w-1/2">
+            <div className="px-8">
+              <h3 className="font-bold text-gray-900">About</h3>
+              <p className="py-4 text-gray-600 text-sm">
+                Feel free to contact me.
+                <br />© {new Date().getFullYear()} Billy,
+                <br />
+                Built with
+                <a href="https://www.gatsbyjs.com"> Gatsby</a>
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap flex-row w-full md:w-1/2">
+            <div className="px-8">
+              <h3 className="font-bold text-gray-900 mb-4">Social</h3>
+              <div class="grid grid-cols-4 md:grid-cols-2 gap-6">
+                <a href="https://twitter.com/billymosis" title="Twitter">
+                  <Twitter size={24} />
+                </a>
+                <a href="https://github.com/billymosis" title="GitHub">
+                  <GitHub size={24} />
+                </a>
+                <a href="mailto:edo.billy@gmail.com" title="Email">
+                  <At size={24} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/billymosis/"
+                  title="Linked In"
+                >
+                  <In size={24} />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-        <ColorButton
-          sx={{ display: ["block", "block", "none"] }}
-          mode={mode}
-          onClick={cycleMode}
-        />
       </div>
     </footer>
   )
 }
-
-export default Footer
