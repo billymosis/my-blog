@@ -1,0 +1,12 @@
+@tailwind base;
+
+.prose {
+  @apply text-red-700;
+}
+.prose-xl {
+  @apply text-red-700;
+}
+
+@tailwind components;
+
+@tailwind utilities;
