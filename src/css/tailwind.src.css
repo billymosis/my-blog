@@ -1,12 +1,41 @@
 @tailwind base;
 
-.prose {
-  @apply text-red-700;
-}
-.prose-xl {
-  @apply text-red-700;
-}
-
 @tailwind components;
 
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+@layer base {
+  .Typist .Cursor {
+    display: inline-block;
+  }
+  .Typist .Cursor--blinking {
+    opacity: 1;
+    animation: blink 1s linear infinite;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes blinker {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

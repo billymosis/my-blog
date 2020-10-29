@@ -1,8 +1,8 @@
 import React from "react"
-import { Nav, BottomNav } from "../components/nav"
+import { Nav } from "../components/nav"
 import Footer from "../components/footer"
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ children }) => {
   return (
     <body className="bg-gray-100 font-sans leading-normal tracking-normal">
       <Nav />

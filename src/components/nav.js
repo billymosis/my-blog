@@ -43,7 +43,7 @@ function Nav() {
         <div className="pl-4">
           <Link to={"/"}>
             <a
-              className="text-gray-900 no-underline hover:no-underline font-extrabold text-xl"
+              className="text-gray-900 no-underline hover:no-underline font-bold text-xl"
               href="#"
             >
               Billy's Blog

@@ -3,15 +3,13 @@ import React from "react"
 import SEO from "../components/seo"
 import { Layout } from "../components/layout"
 
-function BlogPostTemplate({ data, pageContext, location }) {
+function BlogPostTemplate({ data, pageContext }) {
   const post = data.markdownRemark
-  console.log(post.frontmatter.featuredImage.childImageSharp.fluid.src)
-  const siteTitle = data.site.siteMetadata?.title || `Title`
   let featuredImgFluid =
     post.frontmatter.featuredImage.childImageSharp.fluid.src
   const { previous, next } = pageContext
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -19,7 +17,6 @@ function BlogPostTemplate({ data, pageContext, location }) {
       <article itemScope itemType="http://schema.org/Article">
         <div
           className="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal"
-          style={{ fontFamily: "Georgia, serif" }}
         >
           <div
             className="bg-cover bg-center rounded shadow-lg h-64"
@@ -37,7 +34,7 @@ function BlogPostTemplate({ data, pageContext, location }) {
             </p>
           </div>
           <section
-            className="prose lg:prose-xl font-sans mx-0 max-w-full"
+            className="prose lg:prose-xl mx-0 max-w-full"
             dangerouslySetInnerHTML={{ __html: post.html }}
             itemProp="articleBody"
           ></section>

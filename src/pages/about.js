@@ -1,10 +1,8 @@
-import { Link, graphql } from "gatsby"
 import React from "react"
 import SEO from "../components/seo"
 import { Layout } from "../components/layout"
-import CardPost from "../components/cardpost"
 
-export default function About({}) {
+export default function About() {
   return (
     <Layout>
       <SEO title="About" />
@@ -12,7 +10,7 @@ export default function About({}) {
         <article>
           <div className="h-screen flex flex-col justify-center">
             <h1 className="font-bold font-sans break-normal text-gray-900 pb-2 text-3xl md:text-4xl">
-              Hello!👋
+              Hello!<span role="img" aria-label="hand">👋</span>
             </h1>
             <h2 className="font-normal font-sans break-normal text-gray-900 pt-6 pb-2 text-xl md:text-2xl">
               Halo perkenalkan, saya Billy Mosis Priambodo. Saya menempuh

@@ -3,6 +3,7 @@ import React from "react"
 import SEO from "../components/seo"
 import { Layout } from "../components/layout"
 import CardPost from "../components/cardpost"
+import Typist from "react-typist"
 
 export default function Home({ data }) {
   const posts = data.allMarkdownRemark.nodes
@@ -11,13 +12,16 @@ export default function Home({ data }) {
       <SEO title="Home" />
       <div className="h-screen flex flex-col justify-center">
         <h1 className="font-bold font-sans break-normal text-gray-900 pb-2 text-3xl md:text-4xl">
-          Hi!👋
+          Hi!
+          <span role="img" aria-label="hand">
+            👋
+          </span>
         </h1>
-        <h2 className="font-normal font-sans break-normal text-gray-900 pt-6 pb-2 text-xl md:text-2xl">
-          I'm Civil Engineer from Malang, Indonesia. I do stuffs with computer
-          and sometimes write about it here. Expect some random stuff that I
-          write.
-        </h2>
+        <Typist className="font-normal font-sans break-normal text-gray-900 pt-6 pb-2 text-xl md:text-2xl">
+          I'm Water Resource Engineer from Malang, Indonesia. I do stuffs with
+          computer and sometimes write about it here. Expect some random stuff
+          that I write.
+        </Typist>
       </div>
       <span className="font-semibold font-sans break-normal text-gray-900 pt-6 pb-2 text-xl w-full">
         Recent Blog Posts
