@@ -7,11 +7,7 @@ import {
   FaLinkedin as In,
 } from "react-icons/fa"
 
-import { jsx, useColorMode } from "theme-ui"
-
 import { ColorButton } from "./sidebar"
-
-const modes = ["light", "black", "dark", "deep", "hack", "pink"]
 
 const Footer = () => {
   const [mode, setMode] = useColorMode()
@@ -22,20 +18,10 @@ const Footer = () => {
   }
   return (
     <footer
-      sx={{
-        px: 3,
-        py: 4,
-        width: "100%",
-        maxWidth: "wide",
-        mx: "auto",
-      }}
+      
     >
       <div
-        sx={{
-          py: 4,
-          display: "flex",
-          justifyContent: "center",
-        }}
+       
       >
         <a
           href="https://twitter.com/billymosis"

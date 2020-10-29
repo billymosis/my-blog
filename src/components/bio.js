@@ -3,8 +3,6 @@
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Image from "gatsby-image"
 
-import { jsx } from "theme-ui"
-
 const Bio = ({ className }) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -37,19 +35,7 @@ const Bio = ({ className }) => {
     <div>
       {avatar && (
         <Link to={"/"}>
-
-          <Image
-            fixed={avatar}
-            sx={{
-              borderRadius: 5,
-              boxShadow: "-1px 1px 6px 0px rgba(50, 50, 50, 0.75)",
-              shapeOutside: "circle()",
-              clipPath: "circle()",
-              backgroundColor: "primary",
-            }}
-            alt={author?.name || ``}
-          />
-
+          <Image fixed={avatar} alt={author?.name || ``} />
         </Link>
       )}
       {author?.name && (
@@ -57,9 +43,7 @@ const Bio = ({ className }) => {
           <h1>{author.name}</h1>
           <small>
             <em>
-
               <p>{author?.summary || null}</p>
-
             </em>
           </small>
         </div>
