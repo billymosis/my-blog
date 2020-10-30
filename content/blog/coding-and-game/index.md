@@ -6,6 +6,7 @@ description: Cerita awal mula mengenal bahasa pemograman yang saya kenal melalui
 tags:
   - game
   - coding
+  - life
 featuredImage: ./warcraft3.jpg
 ---
 

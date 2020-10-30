@@ -26,7 +26,7 @@ export default function Home({ data }) {
       <span className="font-semibold font-sans break-normal text-gray-900 pt-6 pb-2 text-xl w-full">
         Recent Blog Posts
       </span>
-      <div className="flex flex-wrap flex-row my-2 mb-10">
+      <div className="flex flex-wrap flex-row my-2 mb-4 mt-4">
         {posts.map(post => {
           let featuredImgFluid =
             post.frontmatter.featuredImage.childImageSharp.fluid.src
@@ -39,7 +39,7 @@ export default function Home({ data }) {
                 date={post.frontmatter.date}
                 link={"blog" + post.fields.slug}
                 Img={featuredImgFluid}
-                className="transition duration-500 ease-in-out hover:-translate-y-1 transform block shadow-md"
+                className="transition duration-500 ease-in-out hover:-translate-y-1 transform block shadow-md hover:shadow-xl"
               />
             </article>
           )

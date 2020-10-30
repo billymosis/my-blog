@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
 
 const Main = ({ children }) => {
   return (
-    <main className="container w-full md:max-w-6xl mx-auto pt-20 px-2">
+    <main className="container w-full md:max-w-4xl mx-auto pt-20 px-2">
       {children}
     </main>
   )

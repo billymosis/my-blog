@@ -4,7 +4,6 @@ date: 2020-09-20T00:00:00.000Z
 description: Halo semuanya, salam kenal!
 tags:
   - life
-  - story
 featuredImage: ./Penelusuran Jaringan Irigasi di Kabupaten Jombang.jpg
 ---
 

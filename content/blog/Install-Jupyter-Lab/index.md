@@ -2,7 +2,7 @@
 title: Install Jupyter Lab
 date: "2020-10-01T00:00:00.000Z"
 description: "Lanjutan dari postingan sebelumnya. Cara / tutorial meng-install Jupyter Lab untuk Windows 10."
-tags: ["hydrology", "programming"]
+tags: ["coding"]
 featuredImage: ./jupyter.jpg
 ---
 

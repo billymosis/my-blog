@@ -34,7 +34,7 @@ const BlogList = ({ data, pageContext }) => {
                 link={"/blog" + post.fields.slug}
                 date={post.frontmatter.date}
                 Img={featuredImgFluid}
-                className="transition duration-500 ease-in-out hover:-translate-y-1 transform block shadow-md"
+                className="transition duration-500 ease-in-out hover:-translate-y-1 transform block shadow-md hover:shadow-xl"
               />
             </article>
           )

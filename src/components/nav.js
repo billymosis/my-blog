@@ -39,7 +39,7 @@ function Nav() {
         }}
       ></div>
 
-      <div className="w-full md:max-w-6xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
+      <div className="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
         <div className="pl-4">
           <Link to={"/"}>
             <a

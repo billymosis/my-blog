@@ -1,8 +1,8 @@
 ---
 title: Python dan Hidrologi
 date: "2020-09-26T00:00:00.000Z"
-description: "Halo teman - teman, blog ini nanti arahnya akan ke programming open source. Maka dari itu, saya akan perkenalkan bahasa pemograman terlebih dahulu sebelum lanjut ke bahasan selanjutnya."
-tags: ["programming"]
+description: "Mencoba python di bidang pengairan."
+tags: ["coding"]
 featuredImage: ./python.jpg
 ---
 
