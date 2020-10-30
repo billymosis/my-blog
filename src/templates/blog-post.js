@@ -13,11 +13,10 @@ function BlogPostTemplate({ data, pageContext }) {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        image={featuredImgFluid}
       />
       <article itemScope itemType="http://schema.org/Article">
-        <div
-          className="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal"
-        >
+        <div className="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal">
           <div
             className="bg-cover bg-center rounded shadow-lg h-64"
             style={{ backgroundImage: `url(${featuredImgFluid})` }}
