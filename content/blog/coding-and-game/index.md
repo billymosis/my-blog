@@ -6,7 +6,7 @@ description: Cerita awal mula mengenal bahasa pemograman yang saya kenal melalui
 tags:
   - game
   - coding
-featuredImage: warcraft.jpg
+featuredImage: ./warcraft.jpg
 ---
 
 Terimakasih dulu kepada kakak sepupu saya yang telah mengenalkan saya bahasa pemograman sejak dini. Dulu awal mula saya mengerti bahasa pemograman saat kakak sepupu saya menunjukkan bahwa dia bisa menggerakkan bola atau meng-animasikannya. Saya yang waktu itu masih menduduki bangku Sekolah Dasar senang sekali bisa melihat bola gerak di layar PC usang tahun 2000an tersebut.
