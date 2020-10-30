@@ -8,6 +8,7 @@ tags:
   - coding
 featuredImage: warcraft.jpg
 ---
+
 Terimakasih dulu kepada kakak sepupu saya yang telah mengenalkan saya bahasa pemograman sejak dini. Dulu awal mula saya mengerti bahasa pemograman saat kakak sepupu saya menunjukkan bahwa dia bisa menggerakkan bola atau meng-animasikannya. Saya yang waktu itu masih menduduki bangku Sekolah Dasar senang sekali bisa melihat bola gerak di layar PC usang tahun 2000an tersebut.
 
 Saya masih ingat sekali dulu kakak sepupu saya menggunakan borland delphi, mungkin dulu saya kira itu bahasa pemograman, tetapi saya baru browsing ternyata itu hanya <abbr title="Integerated Development Environtment">IDE</abbr>. Bahasa yang digunakan oleh borland delphi adalah object Pascal. Saya tidak memproduksi apa-apa ketika mencoba mengulik delphi, sempat beli buku namun tidak saya baca hahaha.
