@@ -7,13 +7,15 @@ function BlogPostTemplate({ data, pageContext }) {
   const post = data.markdownRemark
   let featuredImgFluid =
     post.frontmatter.featuredImage.childImageSharp.fluid.src
+  let featuredImgFixed =
+    post.frontmatter.featuredImage.childImageSharp.fixed.src
   const { previous, next } = pageContext
   return (
     <Layout>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
-        image={featuredImgFluid}
+        image={featuredImgFixed}
       />
       <article itemScope itemType="http://schema.org/Article">
         <div className="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal">
@@ -117,6 +119,9 @@ export const pageQuery = graphql`
           childImageSharp {
             fluid(quality: 100) {
               ...GatsbyImageSharpFluid
+            }
+            fixed(width: 400) {
+              ...GatsbyImageSharpFixed
             }
           }
         }
