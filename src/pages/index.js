@@ -63,7 +63,10 @@ export const postquery = graphql`
         title
       }
     }
-    allMarkdownRemark(limit: 3) {
+    allMarkdownRemark(
+      limit: 3
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       nodes {
         excerpt(pruneLength: 280)
         fields {
