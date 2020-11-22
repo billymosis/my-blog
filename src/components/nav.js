@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import { FaMoon as Night, FaSun as Light } from "react-icons/fa"
+import { ThemeContext } from "./themeContext"
 
 function Nav() {
   const [isActive, setActive] = useState(false)
-  const [isDark, setIsDark] = useState(
-    localStorage.getItem("theme") === "dark" ? true : false
-  )
-  
+
+  const toggleClass = () => {
+    setActive(!isActive)
+  }
+
+  const [isDark, setIsDark] = useState(ThemeContext)
+
   const toggleThemeChange = () => {
     if (isDark === false) {
       localStorage.setItem("theme", "dark")
@@ -18,10 +22,6 @@ function Nav() {
       document.getElementsByTagName("HTML")[0].classList.remove("dark")
       setIsDark(false)
     }
-  }
-
-  const toggleClass = () => {
-    setActive(!isActive)
   }
 
   const [offset, setOffset] = useState(0)
