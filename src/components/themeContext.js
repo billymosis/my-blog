@@ -14,7 +14,7 @@ const getInitialTheme = () => {
       return "dark"
     }
   }
-  return "dark"
+  return "light"
 }
 
 export const ThemeProvider = ({ initialTheme, children }) => {

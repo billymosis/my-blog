@@ -142,7 +142,7 @@ function Nav() {
             </li>
             <li className="mr-3">
               <a
-                className="inline-block py-2 px-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                className="inline-block py-2 px-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"
                 onClick={toggleThemeChange}
               >
                 {isDark ? <Night size={20} /> : <Light size={20} />}
