@@ -30,12 +30,12 @@ export default function CardPost({
           >
             <img src={Img} className="object-cover w-full h-full"></img>
           </div>
-          <div className="col-span-10 overflow-hidden h-full lg:h-full border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+          <div className="col-span-10 overflow-hidden h-full lg:h-full border-r border-b border-l dark:border-gray-800 border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
             <p>
-              <h1 className="text-gray-900 font-bold text-xl">{title}</h1>
+              <h1 className="font-bold text-xl">{title}</h1>
               <small>{date}</small>
 
-              <p className="text-gray-700 text-base h-full">{description}</p>
+              <p className="text-base h-full">{description}</p>
             </p>
             <div className="px-6 pt-4 pb-2 text-right">
               <Tags tag={tag} />

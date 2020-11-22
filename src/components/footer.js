@@ -8,12 +8,12 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-400 shadow">
+    <footer className="bg-white border-gray-400 dark:bg-gray-900 border-t shadow">
       <div className="container max-w-4xl mx-auto flex py-8 ">
         <div className="w-full mx-auto flex flex-wrap">
           <div className="flex w-full md:w-1/2">
             <div className="px-8">
-              <h3 className="font-bold text-gray-900">About</h3>
+              <h3 className="font-bold ">About</h3>
               <p className="py-4 text-gray-600 text-sm">
                 Feel free to contact me.
                 <br />© {new Date().getFullYear()} Billy,
@@ -26,7 +26,7 @@ export default function Footer() {
 
           <div className="flex flex-wrap flex-row w-full md:w-1/2">
             <div className="px-8">
-              <h3 className="font-bold text-gray-900 mb-4">Social</h3>
+              <h3 className="font-bold mb-4">Social</h3>
               <div class="grid grid-cols-4 md:grid-cols-2 gap-6">
                 <a href="https://twitter.com/billymosis" title="Twitter">
                   <Twitter size={24} />

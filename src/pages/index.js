@@ -11,19 +11,19 @@ export default function Home({ data }) {
     <Layout>
       <SEO title="Home" />
       <div className="h-screen flex flex-col justify-center">
-        <h1 className="font-bold font-sans break-normal text-gray-900 pb-2 text-3xl md:text-4xl">
+        <h1 className="font-bold font-sans break-normal  pb-2 text-3xl md:text-4xl">
           Hi!
           <span role="img" aria-label="hand">
             👋
           </span>
         </h1>
-        <Typist className="font-normal font-sans break-normal text-gray-900 pt-6 pb-2 text-xl md:text-2xl">
+        <Typist className="font-normal font-sans break-normal pt-6 pb-2 text-xl md:text-2xl">
           I'm Water Resource Engineer from Malang, Indonesia. I do stuffs with
           computer and sometimes write about it here. Expect some random stuff
           that I write.
         </Typist>
       </div>
-      <span className="font-semibold font-sans break-normal text-gray-900 pt-6 pb-2 text-xl w-full">
+      <span className="font-semibold font-sans break-normal pt-6 pb-2 text-xl w-full">
         Recent Blog Posts
       </span>
       <div className="flex flex-wrap flex-row my-2 mb-4 mt-4">
@@ -39,7 +39,7 @@ export default function Home({ data }) {
                 date={post.frontmatter.date}
                 link={"blog" + post.fields.slug}
                 Img={featuredImgFluid}
-                className="transition duration-500 ease-in-out hover:-translate-y-1 transform block shadow-md hover:shadow-xl"
+                className="bg-white dark:bg-gray-900 transition duration-500 ease-in-out hover:-translate-y-1 transform block shadow-md hover:shadow-xl"
               />
             </article>
           )
@@ -47,7 +47,7 @@ export default function Home({ data }) {
       </div>
       <div className="text-right w-full mb-10">
         <Link to={"blog"}>
-          <a class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-full">
+          <a class="bg-green-400 hover:bg-green-600 dark:bg-gray-800 dark:hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-full">
             Read More ...
           </a>
         </Link>

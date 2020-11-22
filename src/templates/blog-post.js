@@ -18,7 +18,7 @@ function BlogPostTemplate({ data, pageContext }) {
         image={featuredImgFixed}
       />
       <article itemScope itemType="http://schema.org/Article">
-        <div className="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal">
+        <div className="w-full px-4 md:px-6 text-xl leading-normal">
           <div
             className="bg-cover bg-center rounded shadow-lg h-64"
             style={{ backgroundImage: `url(${featuredImgFluid})` }}
@@ -26,16 +26,16 @@ function BlogPostTemplate({ data, pageContext }) {
           <div className="font-sans">
             <h1
               itemProp="headline"
-              className="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl"
+              className="font-bold font-sans break-normal pt-6 pb-2 text-3xl md:text-4xl"
             >
               {post.frontmatter.title}
             </h1>
-            <p className="text-sm md:text-base font-normal text-gray-600">
+            <p className="text-sm md:text-base font-normal text-gray-600 dark:text-white">
               {post.frontmatter.date}
             </p>
           </div>
           <section
-            className="prose lg:prose-xl mx-0 max-w-full"
+            className="prose lg:prose-xl mx-0 max-w-full dark:prose-dark pt-5"
             dangerouslySetInnerHTML={{ __html: post.html }}
             itemProp="articleBody"
           ></section>

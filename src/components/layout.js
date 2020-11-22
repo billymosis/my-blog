@@ -4,7 +4,7 @@ import Footer from "../components/footer"
 
 const Layout = ({ children }) => {
   return (
-    <body className="bg-gray-100 font-sans leading-normal tracking-normal">
+    <body className="bg-gray-100 font-sans leading-normal tracking-normal dark:text-white dark:bg-black transition duration-500 ease-in-out">
       <Nav />
 
       <Main>{children}</Main>

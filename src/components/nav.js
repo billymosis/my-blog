@@ -1,7 +1,24 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
+import { FaMoon as Night, FaSun as Light } from "react-icons/fa"
+
 function Nav() {
   const [isActive, setActive] = useState(false)
+  const [isDark, setIsDark] = useState(
+    localStorage.getItem("theme") === "dark" ? true : false
+  )
+  
+  const toggleThemeChange = () => {
+    if (isDark === false) {
+      localStorage.setItem("theme", "dark")
+      document.getElementsByTagName("HTML")[0].classList.add("dark")
+      setIsDark(true)
+    } else {
+      localStorage.setItem("theme", "light")
+      document.getElementsByTagName("HTML")[0].classList.remove("dark")
+      setIsDark(false)
+    }
+  }
 
   const toggleClass = () => {
     setActive(!isActive)
@@ -25,8 +42,8 @@ function Nav() {
       id="header"
       className={
         offset > 10
-          ? "bg-white shadow fixed w-full z-10 top-0"
-          : "fixed w-full z-10 top-0"
+          ? "bg-white dark:bg-gray-900 shadow fixed w-full z-10 top-0"
+          : "bg-gray-100 dark:bg-black fixed w-full z-10 top-0"
       }
     >
       <div
@@ -43,7 +60,7 @@ function Nav() {
         <div className="pl-4">
           <Link to={"/"}>
             <a
-              className="text-gray-900 no-underline hover:no-underline font-bold text-xl"
+              className="no-underline hover:no-underline font-bold text-xl"
               href="#"
             >
               Billy's Blog
@@ -76,17 +93,17 @@ function Nav() {
             offset > 10
               ? `w-full flex-grow lg:flex lg:items-center lg:w-auto ${
                   isActive ? "" : "hidden"
-                } lg:block mt-2 lg:mt-0 bg-white md:bg-transparent z-20`
+                } lg:block mt-2 lg:mt-0 bg-white dark:bg-gray-900 md:bg-transparent z-20`
               : `w-full flex-grow lg:flex lg:items-center lg:w-auto ${
                   isActive ? "" : "hidden"
-                } lg:block mt-2 lg:mt-0 bg-gray-100 md:bg-transparent z-20`
+                } lg:block mt-2 lg:mt-0 bg-gray-100 dark:bg-black md:bg-transparent z-20`
           }
         >
           <ul className="list-reset lg:flex justify-end flex-1 items-center">
             <li className="mr-3">
               <Link to={"/"} activeClassName="font-bold">
                 <a
-                  className="inline-block py-2 px-4 text-gray-900 no-underline hover:underline"
+                  className="inline-block py-2 px-4 no-underline hover:underline"
                   href="#"
                 >
                   Home
@@ -96,7 +113,7 @@ function Nav() {
             <li className="mr-3">
               <Link to={"/blog"} activeClassName="font-bold">
                 <a
-                  className="inline-block py-2 px-4 text-gray-900 no-underline hover:underline"
+                  className="inline-block py-2 px-4 no-underline hover:underline"
                   href="#"
                 >
                   Blog
@@ -106,7 +123,7 @@ function Nav() {
             <li className="mr-3">
               <Link to={"/project"} activeClassName="font-bold">
                 <a
-                  className="inline-block py-2 px-4 text-gray-900 no-underline hover:underline"
+                  className="inline-block py-2 px-4  no-underline hover:underline"
                   href="#"
                 >
                   Project
@@ -116,12 +133,20 @@ function Nav() {
             <li className="mr-3">
               <Link to={"/about"} activeClassName="font-bold">
                 <a
-                  className="inline-block py-2 px-4 text-gray-900 no-underline hover:underline"
+                  className="inline-block py-2 px-4 no-underline hover:underline"
                   href="#"
                 >
                   About
                 </a>
               </Link>
+            </li>
+            <li className="mr-3">
+              <a
+                className="inline-block py-2 px-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
+                onClick={toggleThemeChange}
+              >
+                {isDark ? <Night size={20} /> : <Light size={20} />}
+              </a>
             </li>
           </ul>
         </div>
@@ -129,6 +154,5 @@ function Nav() {
     </nav>
   )
 }
-
 
 export { Nav }

@@ -9,10 +9,10 @@ export default function Project() {
       <main>
         <article>
           <div className="h-screen flex flex-col justify-center">
-            <h1 className="font-bold font-sans break-normal text-gray-900 pb-2 text-3xl md:text-4xl">
+            <h1 className="font-bold font-sans break-normal pb-2 text-3xl md:text-4xl">
               Kosong!<span aria-label="sad" role="img">😌</span>
             </h1>
-            <h2 className="font-normal font-sans break-normal text-gray-900 pt-6 pb-2 text-xl md:text-2xl">
+            <h2 className="font-normal font-sans break-normal pt-6 pb-2 text-xl md:text-2xl">
               Disini nanti saya bakal post tentang side project saya.
             </h2>
             <p>Tunggu dulu.</p>
