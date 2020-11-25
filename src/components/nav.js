@@ -11,9 +11,8 @@ function Nav() {
   }
 
   const [isDark, setIsDark] = useState(ThemeContext)
-
   const toggleThemeChange = () => {
-    if (isDark === false) {
+    if (localStorage.getItem("theme") === "light" || !isDark) {
       localStorage.setItem("theme", "dark")
       document.getElementsByTagName("HTML")[0].classList.add("dark")
       setIsDark(true)
@@ -145,7 +144,11 @@ function Nav() {
                 className="inline-block py-2 px-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"
                 onClick={toggleThemeChange}
               >
-                {isDark ? <Night size={20} /> : <Light size={20} />}
+                {localStorage.getItem("theme") === "dark" ? (
+                  <Night size={20} />
+                ) : (
+                  <Light size={20} />
+                )}
               </a>
             </li>
           </ul>
