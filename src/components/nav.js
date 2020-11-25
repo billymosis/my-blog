@@ -7,7 +7,10 @@ function Nav() {
   const [isActive, setActive] = useState(false)
 
   function ThemeIsDark() {
-    if (localStorage.getItem("theme") === "dark") {
+    if (
+      typeof window !== "undefined" &&
+      localStorage.getItem("theme") === "dark"
+    ) {
       return true
     } else {
       return false
