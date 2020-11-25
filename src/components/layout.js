@@ -6,7 +6,7 @@ import { ThemeProvider } from "./themeContext"
 const Layout = ({ children }) => {
   return (
     <ThemeProvider>
-      <body className="bg-gray-100 font-sans leading-normal tracking-normal dark:text-white dark:bg-black transition duration-500 ease-in-out">
+      <body className="bg-gray-100 font-sans leading-normal tracking-normal dark:text-white dark:bg-black transition duration-75 ease-in-out">
         <Nav />
 
         <Main>{children}</Main>
