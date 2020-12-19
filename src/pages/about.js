@@ -26,7 +26,7 @@ export default function About() {
             <p>Sekian perkenalan dari saya.</p>
             <br />
             <br />
-            <p>This blog powered with Gatsby.js, Tailwinds 2.0 and Netlify</p>
+            <p>This blog powered with Gatsby.js, Tailwind CSS V2 and Netlify.</p>
             <p>
               Blog design heavily inspired with{" "}
               <a
@@ -34,7 +34,7 @@ export default function About() {
                 href="https://github.com/tailwindtoolbox/Minimal-Blog"
               >
                 https://github.com/tailwindtoolbox/Minimal-Blog
-              </a>{" "}
+              </a>{"."}
             </p>
           </div>
         </article>
