@@ -47,7 +47,7 @@ export default function Home({ data }) {
       </div>
       <div className="text-right w-full mb-10">
         <Link to={"blog"}>
-          <a class="bg-green-400 hover:bg-green-600 dark:bg-gray-800 dark:hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-full">
+          <a href="/blog" class="bg-green-400 hover:bg-green-600 dark:bg-gray-800 dark:hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-full">
             Read More ...
           </a>
         </Link>

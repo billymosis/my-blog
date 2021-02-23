@@ -46,7 +46,7 @@ function BlogPostTemplate({ data, pageContext }) {
           {post.frontmatter.tags.map(tagx => {
             return (
               <a
-                href="#"
+                href="/"
                 className="text-base md:text-sm text-teal-500 no-underline hover:underline"
               >
                 {tagx},&nbsp;

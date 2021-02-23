@@ -28,7 +28,7 @@ export default function CardPost({
             className="col-span-2 h-40 lg:h-auto bg-center bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
             title={title}
           >
-            <img src={Img} className="object-cover w-full h-full"></img>
+            <img src={Img} alt="Card Cover" className="object-cover w-full h-full"></img>
           </div>
           <div className="col-span-10 overflow-hidden h-full lg:h-full border-r border-b border-l dark:border-gray-800 border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
             <p>

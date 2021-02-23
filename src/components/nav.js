@@ -72,7 +72,7 @@ function Nav() {
           <Link to={"/"}>
             <a
               className="no-underline hover:no-underline font-bold text-xl"
-              href="#"
+              href="/"
             >
               Billy's Blog
             </a>
@@ -115,7 +115,7 @@ function Nav() {
               <Link to={"/"} activeClassName="font-bold">
                 <a
                   className="inline-block py-2 px-4 no-underline hover:underline"
-                  href="#"
+                  href="/"
                 >
                   Home
                 </a>
@@ -125,7 +125,7 @@ function Nav() {
               <Link to={"/blog"} activeClassName="font-bold">
                 <a
                   className="inline-block py-2 px-4 no-underline hover:underline"
-                  href="#"
+                  href="/blog"
                 >
                   Blog
                 </a>
@@ -135,7 +135,7 @@ function Nav() {
               <Link to={"/project"} activeClassName="font-bold">
                 <a
                   className="inline-block py-2 px-4  no-underline hover:underline"
-                  href="#"
+                  href="/project"
                 >
                   Project
                 </a>
@@ -145,19 +145,19 @@ function Nav() {
               <Link to={"/about"} activeClassName="font-bold">
                 <a
                   className="inline-block py-2 px-4 no-underline hover:underline"
-                  href="#"
+                  href="/about"
                 >
                   About
                 </a>
               </Link>
             </li>
             <li className="mr-3">
-              <a
+              <button
                 className="inline-block py-2 px-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer"
                 onClick={toggleThemeChange}
               >
                 {ThemeIsDark() ? <Night size={20} /> : <Light size={20} />}
-              </a>
+              </button>
             </li>
           </ul>
         </div>
