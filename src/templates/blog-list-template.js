@@ -59,36 +59,38 @@ const BlogList = ({ data, pageContext }) => {
 export default BlogList
 
 export const blogListQuery = graphql`
-  query blogListQuery($skip: Int!, $limit: Int!) {
-    site {
-      siteMetadata {
-        title
-      }
+query blogListQuery($locale: String!,$skip: Int!, $limit: Int!) {
+  site {
+    siteMetadata {
+      title
     }
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: $limit
-      skip: $skip
+  }
+  allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, 
+    filter: {fields: {locale: {eq: $locale}}}
+    limit: $limit
+    skip: $skip
     ) {
-      nodes {
-        excerpt(pruneLength: 280)
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
-          description
-          tags
-          featuredImage {
-            childImageSharp {
-              fluid(maxWidth: 400) {
-                ...GatsbyImageSharpFluid
-              }
+    nodes {
+      excerpt(pruneLength: 280)
+      fields {
+        slug
+        locale
+      }
+      frontmatter {
+        date(formatString: "MMMM DD, YYYY")
+        title
+        description
+        tags
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
       }
     }
   }
+}
+
 `

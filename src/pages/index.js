@@ -57,7 +57,7 @@ export default function Home({ data }) {
 }
 
 export const postquery = graphql`
-  query postquery {
+  query postquery ($locale: String!) {
     site {
       siteMetadata {
         title
@@ -65,12 +65,14 @@ export const postquery = graphql`
     }
     allMarkdownRemark(
       limit: 3
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___date], order: DESC },
+      filter: { fields: {locale: {eq: $locale}}},
     ) {
       nodes {
         excerpt(pruneLength: 280)
         fields {
           slug
+          locale
         }
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
