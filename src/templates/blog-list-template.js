@@ -6,7 +6,7 @@ import CardPost from "../components/cardpost"
 
 const BlogList = ({ data, pageContext }) => {
   const posts = data.allMarkdownRemark.nodes
-  const { currentPage, numPages } = pageContext
+  const { currentPage, numPages, numPages2, locale } = pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
   const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1).toString()
@@ -19,7 +19,8 @@ const BlogList = ({ data, pageContext }) => {
       <main className="flex flex-wrap flex-row my-2 mb-10">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
-          let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid.src
+          let featuredImgFluid =
+            post.frontmatter.featuredImage.childImageSharp.fluid.src
           return (
             <article
               key={post.fields.slug}
@@ -31,7 +32,11 @@ const BlogList = ({ data, pageContext }) => {
                 title={title}
                 description={post.frontmatter.description}
                 tag={post.frontmatter.tags}
-                link={"/blog" + post.fields.slug}
+                link={
+                  post.fields.locale === "en"
+                    ? "/en/blog" + post.fields.slug
+                    : "/blog" + post.fields.slug
+                }
                 date={post.frontmatter.date}
                 Img={featuredImgFluid}
                 className="bg-white dark:bg-gray-900 transition duration-500 ease-in-out hover:-translate-y-1 transform block shadow-md hover:shadow-xl"
@@ -39,18 +44,33 @@ const BlogList = ({ data, pageContext }) => {
             </article>
           )
         })}
-        <nav>
-          {!isFirst && (
-            <Link to={"/blog/" + prevPage} rel="prev">
-              ← Previous Page
-            </Link>
-          )}
-          {!isLast && (
-            <Link to={"/blog/" + nextPage} rel="next">
-              Next Page →
-            </Link>
-          )}
-        </nav>
+        {locale === "id" ? (
+          <nav>
+            {!isFirst && (
+              <Link to={"/blog/" + prevPage} rel="prev">
+                ← Previous Page
+              </Link>
+            )}
+            {!isLast && numPages > 1 && (
+              <Link to={"/blog/" + nextPage} rel="next">
+                Next Page →
+              </Link>
+            )}
+          </nav>
+        ) : (
+          <nav>
+            {!isFirst && (
+              <Link to={prevPage} rel="prev">
+                ← Previous Page
+              </Link>
+            )}
+            {!isLast && numPages2 > 1 && (
+              <Link to={nextPage} rel="next">
+                Next Page →
+              </Link>
+            )}
+          </nav>
+        )}
       </main>
     </Layout>
   )
@@ -59,38 +79,38 @@ const BlogList = ({ data, pageContext }) => {
 export default BlogList
 
 export const blogListQuery = graphql`
-query blogListQuery($locale: String!,$skip: Int!, $limit: Int!) {
-  site {
-    siteMetadata {
-      title
-    }
-  }
-  allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, 
-    filter: {fields: {locale: {eq: $locale}}}
-    limit: $limit
-    skip: $skip
-    ) {
-    nodes {
-      excerpt(pruneLength: 280)
-      fields {
-        slug
-        locale
-      }
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+  query blogListQuery($locale: String!, $skip: Int!, $limit: Int!) {
+    site {
+      siteMetadata {
         title
-        description
-        tags
-        featuredImage {
-          childImageSharp {
-            fluid(maxWidth: 400) {
-              ...GatsbyImageSharpFluid
+      }
+    }
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { locale: { eq: $locale } } }
+      limit: $limit
+      skip: $skip
+    ) {
+      nodes {
+        excerpt(pruneLength: 280)
+        fields {
+          slug
+          locale
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
+          tags
+          featuredImage {
+            childImageSharp {
+              fluid(maxWidth: 400) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
         }
       }
     }
   }
-}
-
 `

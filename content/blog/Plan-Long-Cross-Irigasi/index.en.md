@@ -1,5 +1,5 @@
 ﻿---
-title: PLAN LONG CROSS AUTOCAD IRIGASI
+title: IRRIGATION PLAN LONG & CROSS
 date: "2020-12-19T00:00:00.000Z"
 description: "A program to make it easier for engineers and drafter to process survey results and calculations in irrigation projects.
 This program was created with existing Irrigation / Modernization rehabilitation process in mind."

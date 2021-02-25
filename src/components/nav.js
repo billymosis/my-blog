@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import { FaMoon as Night, FaSun as Light } from "react-icons/fa"
 import { ThemeContext } from "./themeContext"
+import Language from "./language"
+import { FormattedMessage } from "react-intl"
+import LocalizedLink from "./Local"
 
 function Nav() {
   const [isActive, setActive] = useState(false)
@@ -112,44 +115,35 @@ function Nav() {
         >
           <ul className="list-reset lg:flex justify-end flex-1 items-center">
             <li className="mr-3">
-              <Link to={"/"} activeClassName="font-bold">
-                <a
-                  className="inline-block py-2 px-4 no-underline hover:underline"
-                  href="/"
-                >
-                  Home
+              <LocalizedLink to={"/"} activeClassName="font-bold">
+                <a className="inline-block py-2 px-4 no-underline hover:underline">
+                  <FormattedMessage id="index.home" />
                 </a>
-              </Link>
+              </LocalizedLink>
             </li>
             <li className="mr-3">
-              <Link to={"/blog"} activeClassName="font-bold">
-                <a
-                  className="inline-block py-2 px-4 no-underline hover:underline"
-                  href="/blog"
-                >
+              <LocalizedLink to={"/blog"} activeClassName="font-bold">
+                <a className="inline-block py-2 px-4 no-underline hover:underline">
                   Blog
                 </a>
-              </Link>
+              </LocalizedLink>
             </li>
             <li className="mr-3">
-              <Link to={"/project"} activeClassName="font-bold">
-                <a
-                  className="inline-block py-2 px-4  no-underline hover:underline"
-                  href="/project"
-                >
+              <LocalizedLink to={"/project"} activeClassName="font-bold">
+                <a className="inline-block py-2 px-4  no-underline hover:underline">
                   Project
                 </a>
-              </Link>
+              </LocalizedLink>
             </li>
             <li className="mr-3">
-              <Link to={"/about"} activeClassName="font-bold">
-                <a
-                  className="inline-block py-2 px-4 no-underline hover:underline"
-                  href="/about"
-                >
-                  About
+              <LocalizedLink to={"/about"} activeClassName="font-bold">
+                <a className="inline-block py-2 px-4 no-underline hover:underline">
+                  <FormattedMessage id="index.about" />
                 </a>
-              </Link>
+              </LocalizedLink>
+            </li>
+            <li className="mr-3">
+              <Language className="inline-block py-2 px-4 no-underline hover:underline" />
             </li>
             <li className="mr-3">
               <button

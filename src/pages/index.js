@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import { Layout } from "../components/layout"
 import CardPost from "../components/cardpost"
 import Typist from "react-typist"
+import { FormattedMessage } from "react-intl"
 
 export default function Home({ data }) {
   const posts = data.allMarkdownRemark.nodes
@@ -12,19 +13,21 @@ export default function Home({ data }) {
       <SEO title="Home" />
       <div className="h-screen flex flex-col justify-center">
         <h1 className="font-bold font-sans break-normal  pb-2 text-3xl md:text-4xl">
-          Hi!
+          <FormattedMessage id="index.sambutan" />
           <span role="img" aria-label="hand">
             👋
           </span>
         </h1>
-        <Typist className="font-normal font-sans break-normal pt-6 pb-2 text-xl md:text-2xl">
-          I'm Water Resource Engineer from Malang, Indonesia. I do stuffs with
-          computer and sometimes write about it here. Expect some random stuff
-          that I write.
-        </Typist>
+        <FormattedMessage id="index.welcomeMessage">
+          {placeholder => (
+            <Typist className="font-normal font-sans break-normal pt-6 pb-2 text-xl md:text-2xl">
+              {placeholder}
+            </Typist>
+          )}
+        </FormattedMessage>
       </div>
       <span className="font-semibold font-sans break-normal pt-6 pb-2 text-xl w-full">
-        Recent Blog Posts
+        <FormattedMessage id="index.recent" defaultMessage="Recent Blog Post" />
       </span>
       <div className="flex flex-wrap flex-row my-2 mb-4 mt-4">
         {posts.map(post => {
@@ -47,8 +50,11 @@ export default function Home({ data }) {
       </div>
       <div className="text-right w-full mb-10">
         <Link to={"blog"}>
-          <a href="/blog" class="bg-green-400 hover:bg-green-600 dark:bg-gray-800 dark:hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-full">
-            Read More ...
+          <a
+            href="/blog"
+            class="bg-green-400 hover:bg-green-600 dark:bg-gray-800 dark:hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-full"
+          >
+            <FormattedMessage id="index.more" />
           </a>
         </Link>
       </div>
@@ -57,7 +63,7 @@ export default function Home({ data }) {
 }
 
 export const postquery = graphql`
-  query postquery ($locale: String!) {
+  query postquery($locale: String!) {
     site {
       siteMetadata {
         title
@@ -65,8 +71,8 @@ export const postquery = graphql`
     }
     allMarkdownRemark(
       limit: 3
-      sort: { fields: [frontmatter___date], order: DESC },
-      filter: { fields: {locale: {eq: $locale}}},
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { locale: { eq: $locale } } }
     ) {
       nodes {
         excerpt(pruneLength: 280)
