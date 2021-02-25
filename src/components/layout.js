@@ -8,7 +8,7 @@ import Indonesia from "../lang/id.json"
 import { navigate } from "gatsby"
 
 export const Context = React.createContext()
-const local = localStorage["locale"]
+const local = window.localStorage["locale"]
 let lang
 if (local === "id") {
   lang = Indonesia
@@ -25,11 +25,11 @@ const Layout = ({ children }) => {
     setLocale(newLocale)
     if (newLocale === "id") {
       navigate("/")
-      localStorage.setItem("locale", "id")
+      window.localStorage.setItem("locale", "id")
       setMessages(Indonesia)
     } else {
       navigate("/en/")
-      localStorage.setItem("locale", "en")
+      window.localStorage.setItem("locale", "en")
       setMessages(English)
     }
   }
