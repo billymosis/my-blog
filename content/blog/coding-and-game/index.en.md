@@ -1,8 +1,7 @@
 ---
-title: CODING ENGLISH
+title: Coding While Gaming
 date: 2020-10-30T03:33:09.455Z
-description: Cerita awal mula mengenal bahasa pemograman yang saya kenal melalui
-  game Warcraft III.
+description: How it started learning how to code while playing my favorite game.
 tags:
   - game
   - coding
@@ -10,16 +9,16 @@ tags:
 featuredImage: ./warcraft3.jpg
 ---
 
-Terimakasih dulu kepada kakak sepupu saya yang telah mengenalkan saya bahasa pemograman sejak dini. Dulu awal mula saya mengerti bahasa pemograman saat kakak sepupu saya menunjukkan bahwa dia bisa menggerakkan bola atau meng-animasikannya. Saya yang waktu itu masih menduduki bangku Sekolah Dasar senang sekali bisa melihat bola gerak di layar PC usang tahun 2000an tersebut.
+First of all thanks to my cousin who introduced me to programming language since I was a boy. Back then I understood programming language when my cousin showed me that he could move the ball and animate it. Me who was still in elementary school, was delighted to see a ball moving linearly on the old CRT 2000s PC screen.
 
-Saya masih ingat sekali dulu kakak sepupu saya menggunakan borland delphi, mungkin dulu saya kira itu bahasa pemograman, tetapi saya baru browsing ternyata itu hanya <abbr title="Integerated Development Environtment">IDE</abbr>. Bahasa yang digunakan oleh borland delphi adalah object Pascal. Saya tidak memproduksi apa-apa ketika mencoba mengulik delphi, sempat beli buku namun tidak saya baca hahaha.
+I still remember once my cousin used Borland Delphi, maybe I thought it was a programming language, but when I was browsing it was only <abbr title = "Integerated Development Environment"> IDE </abbr>. The language used by borland delphi is Pascal objects. I didn't produce anything when I tried to dig Delphi, I bought a book and I didn't read it lol.
 
-Di bangku SMP saya mengenal DoTA dari teman main Warnet. Setiap sekolah saya selalu menyisihkan uang jajan saya 4000 rupiah untuk menyewa PC 1 jam. Semeru Net terletak kurang lebih 100 meter dari SMP saya. Zaman-zaman musik yang diputer Dear God - A7x.mp3 hahaha. Hero pertama yang saya pakai ketika bermain DoTA adalah Yurnero atau Juggernaut kalau di DoTA steam. Pakai hero ini karena saya sudah menamatkan campaign di Warcraft III dan race favorit saya adalah ORC.
+In junior high school, I got to know DoTA from Internet Cafe friend. Everytime school finished I always save my pocket money of 4000 rupiah to rent a 1 hour PC. Semeru Net is located approximately 100 meters from my junior high school. The ages of music played by Dear God - A7x.mp3 lol. The first hero I used while playing DoTA was Yurnero or Juggernaut in DoTA Steam. I Use this Hero because I have finished the campaign in Warcraft III and ORC is my favorite race.
 
-Iseng-iseng bermain di Warnet teman saya mengenalkan custom Map warcraft III yang lucu-lucu, salah satunya adalah uther party, yang selalu bikin saya ngakak. Terus terpikir dari saya bagaimana creator dari Map ini bikin custom Map. Dan akhirnya saya mengenal WC3 Map Editor.
+In meantime my friend introduced me to the hilarious custom Warcraft III maps, one of which was a uther party, which always made me laugh. Then it occurred to me how the creator of this map would make a custom map. And finally I got to know the WC3 Map Editor.
 
-WC3 World Editor adalah IDE yang powerfull dikembangkan oleh Blizzard untuk mendevelop custom Map. Tampilannya sangat sederhana sekali. Di awal saya mungkin hanya main-main naruh pohon, bikin gunung, gitu-gitu saja. Tetapi saya penasaran compare skill hero di DoTA dan skill hero default vanilla warcraft, sangat berbeda sekali. Ternyata saya pelajari skill custom hero di DoTA menggunakan script untuk mengatur animasi, damage, critical chance, AOE dan lain-lain. Saya sendiripun mulai bergerilya baca-baca tentang bagaimana cara untuk membuat custom skill. Saya biasa mampir ke hive workshop dan indogamers.
+WC3 World Editor is an IDE developed by Blizzard for developing Custom Maps. The interface is very simple. In the beginning, I probably just played trees, made mountains, just like that. But I am curious to compare the hero skills in DoTA and the default vanilla warcraft hero skills, very different. It turns out that I created a custom hero skill in DoTA using a script for animation assistance, damage, critical chance, AOE and others. I myself started reading and reading about how to create custom skills. I usually stop by the hiveworkshop and indogamers Forum.
 
-Dari sini saya mengenal IF, ELSE, LOOP, FUNCTION, VARIABLE. Saya pun sempat bikin blog untuk membuat tutorial World Editor ini di <http://seputar-warcraft.blogspot.com/> last post 2011 hahahaha.
+From here I know IF, ELSE, LOOP, FUNCTION, VARIABLE. I also had the chance to create a blog to make this World Editor tutorial at <http://seputar-warcraft.blogspot.com/> last post is at 2011 lol.
 
-Jadi sekian cerita saya bagaimana mengenal software development. Terimakasih sudah membaca sampai akhir.
+So that's my story about how to get to know software development. Thank you for reading till end.

@@ -9,14 +9,11 @@ featuredImage: ./Penelusuran Jaringan Irigasi di Kabupaten Jombang.jpg
 
 ![Penelusuran Irigasi Jombang](./Penelusuran Jaringan Irigasi di Kabupaten Jombang.jpg "Penelusuran Jaringan Irigasi di Kabupaten Jombang")
 
-Halo ini perkenalkan saya Billy.
+Halo perkenalkan saya Billy.
 Untuk mengisi kebosenan saya mau nulis blog.
-Blog ini nantinya untuk edukasi saja.
+Blog ini nantinya untuk edukasi dan bercanda saja.
 
-Di blog ini nantinya saya akan menulis tentang <abbr title="free and open-source software">FOSS </abbr>. Entah kenapa ini sudah mendarah daging di diri saya 😂. Tentunya FOSS yang saya bahas kebanyak di bidang Water Resources Engineering. Beberapa FOSS yang saya gunakan untuk kerja sehari hari:
-
-1. QGIS
-2. Python
+Di blog ini nantinya saya akan menulis tentang <abbr title="free and open-source software">FOSS </abbr>. Entah kenapa ini sudah mendarah daging di diri saya 😂. Tentunya FOSS yang saya bahas kebanyak di bidang Water Resources Engineering. 
 
 HEC-RAS meskipun Free namun hec-ras closed source, ada versi hec-ras open source ketika masih menggunakan fortran.
 

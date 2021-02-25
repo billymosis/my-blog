@@ -1,5 +1,5 @@
 ---
-title: Coding and Game
+title: Main Game dan Coding
 date: 2020-10-30T03:33:09.455Z
 description: Cerita awal mula mengenal bahasa pemograman yang saya kenal melalui
   game Warcraft III.
