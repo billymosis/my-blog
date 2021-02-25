@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { Nav } from "../components/nav"
 import Footer from "../components/footer"
 import { ThemeProvider } from "./themeContext"
@@ -15,16 +15,14 @@ const getInitialLocale = () => {
     if (typeof storedPrefs === "string") {
       return storedPrefs
     } else {
-      if (navigator.language != 'id'){
-        setStorageLocale("locale", 'en')
-        return 'en'
-      } else{
-        setStorageLocale("locale", 'id')
-        return 'id'
+      if (navigator.language !== "id") {
+        setStorageLocale("locale", "en")
+        return "en"
+      } else {
+        setStorageLocale("locale", "id")
+        return "id"
       }
     }
-  } else {
-
   }
 }
 
@@ -36,7 +34,9 @@ const setStorageLocale = (key, value) => {
 
 const Layout = ({ children }) => {
   const [locale, setLocale] = useState(getInitialLocale())
-  const [messages, setMessages] = useState(locale == "id" ? Indonesia : English)
+  const [messages, setMessages] = useState(
+    locale === "id" ? Indonesia : English
+  )
 
   function selectLanguage(e) {
     const newLocale = e
@@ -53,19 +53,19 @@ const Layout = ({ children }) => {
   }
 
   return (
-    <ThemeProvider>
-      <body className="bg-gray-100 font-sans leading-normal tracking-normal dark:text-white dark:bg-black transition duration-75 ease-in-out">
-        <Context.Provider value={{ locale, selectLanguage }}>
-          <IntlProvider key={locale} locale={locale} messages={messages}>
+    <Context.Provider value={{ locale, selectLanguage }}>
+      <IntlProvider key={locale} locale={locale} messages={messages}>
+        <ThemeProvider>
+          <body className="bg-gray-100 font-sans leading-normal tracking-normal dark:text-white dark:bg-black transition duration-75 ease-in-out">
             <Nav />
 
             <Main>{children}</Main>
 
             <Footer />
-          </IntlProvider>
-        </Context.Provider>
-      </body>
-    </ThemeProvider>
+          </body>
+        </ThemeProvider>
+      </IntlProvider>
+    </Context.Provider>
   )
 }
 

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import { Link } from "gatsby"
 import { FaMoon as Night, FaSun as Light } from "react-icons/fa"
 import { ThemeContext } from "./themeContext"
 import Language from "./language"
@@ -72,14 +71,13 @@ function Nav() {
 
       <div className="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
         <div className="pl-4">
-          <Link to={"/"}>
+          <LocalizedLink to={"/"} activeClassName="font-bold">
             <a
               className="no-underline hover:no-underline font-bold text-xl"
-              href="/"
             >
               Billy's Blog
             </a>
-          </Link>
+          </LocalizedLink>
         </div>
 
         <div className="block lg:hidden pr-4">
