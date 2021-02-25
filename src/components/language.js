@@ -3,13 +3,12 @@ import { Context } from "./layout"
 import { Link } from "gatsby"
 
 const Language = ({ className }) => {
-  const context = useContext(Context)
+  const myContext = useContext(Context)
   const [isOpen, setOpen] = useState(false)
 
   const toggleDropdown = () => {
     setOpen(!isOpen)
   }
-
   return (
     <div className={className}>
       <div className="relative">
@@ -17,12 +16,12 @@ const Language = ({ className }) => {
           onClick={toggleDropdown}
           className="relative z-10 block overflow-hidden focus:outline-none focus:border-white"
         >
-          Language ▼
+          {myContext.locale.toUpperCase()} ▼
         </button>
         <div
           className={
             isOpen
-              ? "absolute right-0 mt-2 w-48 bg-white rounded-lg py-2 shadow-xl"
+              ? "lg:absolute right-0 mt-2 w-48 bg-white rounded-lg py-2 shadow-xl"
               : "hidden"
           }
         >
@@ -33,7 +32,7 @@ const Language = ({ className }) => {
                 to={"/"}
                 onClick={() => {
                   toggleDropdown()
-                  context.selectLanguage("id")
+                  myContext.selectLanguage("id")
                 }}
               >
                 Indonesia
@@ -45,7 +44,7 @@ const Language = ({ className }) => {
                 to={"/en"}
                 onClick={() => {
                   toggleDropdown()
-                  context.selectLanguage("en")
+                  myContext.selectLanguage("en")
                 }}
               >
                 English

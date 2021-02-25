@@ -8,46 +8,64 @@ import Indonesia from "../lang/id.json"
 import { navigate } from "gatsby"
 
 export const Context = React.createContext()
-const local = window.localStorage["locale"]
-let lang
-if (local === "id") {
-  lang = Indonesia
-} else {
-  lang = English
-}
-const Layout = ({ children }) => {
-  const [locale, setLocale] = useState(local)
 
-  const [messages, setMessages] = useState(lang)
+const getInitialLocale = () => {
+  if (typeof window !== "undefined" && window.localStorage) {
+    const storedPrefs = window.localStorage.getItem("locale")
+    if (typeof storedPrefs === "string") {
+      return storedPrefs
+    } else {
+      if (navigator.language != 'id'){
+        setStorageLocale("locale", 'en')
+        return 'en'
+      } else{
+        setStorageLocale("locale", 'id')
+        return 'id'
+      }
+    }
+  } else {
+
+  }
+}
+
+const setStorageLocale = (key, value) => {
+  if (typeof window !== "undefined" && window.localStorage) {
+    window.localStorage.setItem(key, value)
+  }
+}
+
+const Layout = ({ children }) => {
+  const [locale, setLocale] = useState(getInitialLocale())
+  const [messages, setMessages] = useState(locale == "id" ? Indonesia : English)
 
   function selectLanguage(e) {
     const newLocale = e
     setLocale(newLocale)
     if (newLocale === "id") {
-      navigate("/")
-      window.localStorage.setItem("locale", "id")
       setMessages(Indonesia)
+      navigate("/")
+      setStorageLocale("locale", "id")
     } else {
-      navigate("/en/")
-      window.localStorage.setItem("locale", "en")
       setMessages(English)
+      navigate("/en/")
+      setStorageLocale("locale", "en")
     }
   }
 
   return (
-    <Context.Provider value={{ locale, selectLanguage }}>
-      <IntlProvider locale={locale} messages={messages}>
-        <ThemeProvider>
-          <body className="bg-gray-100 font-sans leading-normal tracking-normal dark:text-white dark:bg-black transition duration-75 ease-in-out">
+    <ThemeProvider>
+      <body className="bg-gray-100 font-sans leading-normal tracking-normal dark:text-white dark:bg-black transition duration-75 ease-in-out">
+        <Context.Provider value={{ locale, selectLanguage }}>
+          <IntlProvider key={locale} locale={locale} messages={messages}>
             <Nav />
 
             <Main>{children}</Main>
 
             <Footer />
-          </body>
-        </ThemeProvider>
-      </IntlProvider>
-    </Context.Provider>
+          </IntlProvider>
+        </Context.Provider>
+      </body>
+    </ThemeProvider>
   )
 }
 
