@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react"
 import { Context } from "./layout"
-import { Link } from "gatsby"
+import { navigate } from "gatsby"
 
 const Language = ({ className }) => {
   const myContext = useContext(Context)
@@ -16,39 +16,61 @@ const Language = ({ className }) => {
           onClick={toggleDropdown}
           className="relative z-10 block overflow-hidden focus:outline-none focus:border-white"
         >
-          {myContext.locale === 'id' ? 'ID' : 'EN'} ▼
+          {myContext.locale === "id" ? "ID" : "EN"} ▼
         </button>
         <div
           className={
             isOpen
-              ? "lg:absolute right-0 mt-2 w-48 bg-white rounded-lg py-2 shadow-xl"
+              ? "lg:absolute right-0 mt-2 w-48 bg-white dark:bg-gray-900 rounded-lg py-2"
               : "hidden"
           }
         >
           <ul>
             <li>
-              <Link
-                className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white"
-                to={"/"}
+              <button
+                className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white w-full dark:text-white "
                 onClick={() => {
                   toggleDropdown()
-                  myContext.selectLanguage("id")
+                  if (myContext.locale !== "id") {
+                    myContext.selectLanguage("id")
+                    let wp = window.location.pathname
+                    if (
+                      wp === "/en/about" ||
+                      wp === "/en/project" ||
+                      wp === "/en/blog"
+                    ) {
+                      navigate(window.location.href.replace("/en", ""))
+                    } else {
+                      navigate(window.location.origin)
+                    }
+                  }
                 }}
               >
                 Indonesia
-              </Link>
+              </button>
             </li>
             <li>
-              <Link
-                className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white"
-                to={"/en"}
+              <button
+                className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white w-full dark:text-white "
                 onClick={() => {
                   toggleDropdown()
-                  myContext.selectLanguage("en")
+                  if (myContext.locale !== "en") {
+                    myContext.selectLanguage("en")
+                    let wp = window.location.pathname
+                    if (
+                      wp === "/about" ||
+                      wp === "/project" ||
+                      wp === "/blog"
+                    ) {
+                      navigate(window.location.href.replace(wp, "/en" + wp))
+                    } else {
+                      navigate(window.location.origin + "/en")
+                    }
+                  }
                 }}
               >
                 English
-              </Link>
+              </button>
             </li>
           </ul>
         </div>

@@ -1,7 +1,7 @@
 ---
 title: Install Jupyter Lab
 date: "2020-10-01T00:00:00.000Z"
-description: "Lanjutan dari postingan sebelumnya. Cara / tutorial meng-install Jupyter Lab untuk Windows 10."
+description: "How to Install jupyterlab Windows 10."
 tags: ["coding"]
 featuredImage: ./jupyter.jpg
 ---
@@ -33,9 +33,9 @@ Make sure the laptop / PC is connected to the internet beforehand to facilitate 
    ![Jendela CMD](./image4.png "Install Jupyterlab")
 
 5. After installing, type again at the command prompt `jupyter lab`, then the default browser will be opened automatically and the screen jupyter lab will appear.
-   
+
    ![Jupyter Lab dalam browser](./image5.png "Display of Jupyter Lab inside a browser")
 
 ## Done!
 
-With this you can do programming, if it happens the screen still doesn't appear like in step 5 please googling first for the trouble shooting. So many tutorials to install Jupyter Lab. Happy Coding! 
+With this you can do programming, if it happens the screen still doesn't appear like in step 5 please googling first for the trouble shooting. So many tutorials to install Jupyter Lab. Happy Coding!

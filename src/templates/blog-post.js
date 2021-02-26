@@ -1,4 +1,4 @@
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import React from "react"
 import SEO from "../components/seo"
 import { Layout } from "../components/layout"

@@ -6,6 +6,9 @@ import { IntlProvider } from "react-intl"
 import English from "../lang/en.json"
 import Indonesia from "../lang/id.json"
 import { navigate } from "gatsby"
+import ScrollToTop from "./ScrollTop"
+
+
 
 export const Context = React.createContext()
 
@@ -17,9 +20,11 @@ const getInitialLocale = () => {
     } else {
       if (navigator.language !== "id") {
         setStorageLocale("locale", "en")
+        navigate("/en/")
         return "en"
       } else {
         setStorageLocale("locale", "id")
+        navigate("/")
         return "id"
       }
     }
@@ -43,11 +48,9 @@ const Layout = ({ children }) => {
     setLocale(newLocale)
     if (newLocale === "id") {
       setMessages(Indonesia)
-      navigate("/")
       setStorageLocale("locale", "id")
     } else {
       setMessages(English)
-      navigate("/en/")
       setStorageLocale("locale", "en")
     }
   }
@@ -73,6 +76,7 @@ const Main = ({ children }) => {
   return (
     <main className="container w-full md:max-w-4xl mx-auto pt-20 px-2">
       {children}
+      <ScrollToTop></ScrollToTop>
     </main>
   )
 }

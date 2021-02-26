@@ -16,7 +16,7 @@ const BlogList = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <main className="flex flex-wrap flex-row my-2 mb-10">
+      <div className="flex flex-wrap flex-row my-2 mb-10 min-h-screen">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
           let featuredImgFluid =
@@ -71,7 +71,7 @@ const BlogList = ({ data, pageContext }) => {
             )}
           </nav>
         )}
-      </main>
+      </div>
     </Layout>
   )
 }
