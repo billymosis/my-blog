@@ -9,7 +9,8 @@ function BlogPostTemplate({ data, pageContext }) {
     post.frontmatter.featuredImage.childImageSharp.fluid.src
   let featuredImgFixed =
     post.frontmatter.featuredImage.childImageSharp.fixed.src
-  const { previous, next } = pageContext
+  //const { previous, next } = pageContext
+
   return (
     <Layout>
       <SEO
@@ -55,7 +56,7 @@ function BlogPostTemplate({ data, pageContext }) {
           })}
         </div>
         <hr className="border-b-1 border-gray-400 mb-8 mx-4" />
-        <nav className="font-sans flex justify-between content-center px-4 pb-12">
+        {/* <nav className="font-sans flex justify-between content-center px-4 pb-12">
           <div className="text-left">
             <span className="text-xs md:text-sm font-normal text-gray-600">
               &lt; Previous Post
@@ -64,7 +65,7 @@ function BlogPostTemplate({ data, pageContext }) {
             <p>
               {previous && (
                 <Link
-                  to={"/blog" + previous.fields.slug}
+                  to={previousPath}
                   className="break-normal text-base md:text-sm text-teal-500 font-bold no-underline hover:underline"
                   rel="prev"
                 >
@@ -82,16 +83,16 @@ function BlogPostTemplate({ data, pageContext }) {
             <p>
               {next && (
                 <Link
-                  to={"/blog" + next.fields.slug}
+                  to={nextPath}
                   className="break-normal text-base md:text-sm text-teal-500 font-bold no-underline hover:underline"
-                  rel="prev"
+                  rel="next"
                 >
                   {next.frontmatter.title}
                 </Link>
               )}
             </p>
           </div>
-        </nav>
+        </nav> */}
       </article>
     </Layout>
   )

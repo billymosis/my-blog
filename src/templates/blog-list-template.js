@@ -9,13 +9,13 @@ const BlogList = ({ data, pageContext }) => {
   const { currentPage, numPages, numPages2, locale } = pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
+  const isLast2 = currentPage === numPages2
   const prevPage = currentPage - 1 === 1 ? "" : (currentPage - 1).toString()
   const nextPage = (currentPage + 1).toString()
 
   return (
     <Layout>
       <SEO title="Blog" />
-
       <main className="flex flex-wrap flex-row my-2 mb-10">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -45,27 +45,27 @@ const BlogList = ({ data, pageContext }) => {
           )
         })}
         {locale === "id" ? (
-          <nav>
+          <nav className="justify-between w-full flex">
             {!isFirst && (
               <Link to={"/blog/" + prevPage} rel="prev">
-                ← Previous Page
+                ← Halaman Sebelumnya
               </Link>
             )}
-            {!isLast && numPages > 1 && (
+            {!isLast && (
               <Link to={"/blog/" + nextPage} rel="next">
-                Next Page →
+                Halaman Berikutnya →
               </Link>
             )}
           </nav>
         ) : (
-          <nav>
+          <nav className="justify-between w-full flex">
             {!isFirst && (
-              <Link to={prevPage} rel="prev">
+              <Link to={"/en/blog/" + prevPage} rel="prev">
                 ← Previous Page
               </Link>
             )}
-            {!isLast && numPages2 > 1 && (
-              <Link to={nextPage} rel="next">
+            {!isLast2 && (
+              <Link to={"/en/blog/" + nextPage} rel="next">
                 Next Page →
               </Link>
             )}

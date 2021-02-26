@@ -16,7 +16,7 @@ const Language = ({ className }) => {
           onClick={toggleDropdown}
           className="relative z-10 block overflow-hidden focus:outline-none focus:border-white"
         >
-          {myContext.locale == 'id' ? 'ID' : 'EN'} ▼
+          {myContext.locale === 'id' ? 'ID' : 'EN'} ▼
         </button>
         <div
           className={
