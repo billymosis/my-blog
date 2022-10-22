@@ -5,6 +5,22 @@ import { Layout } from "../components/layout"
 import CardPost from "../components/cardpost"
 import Typist from "react-typist"
 import { FormattedMessage } from "react-intl"
+import { LSP } from '../constants/autocad'
+
+function save(filename, data) {
+  const blob = new Blob([data], { type: 'text/csv' });
+  if (window.navigator.msSaveOrOpenBlob) {
+    window.navigator.msSaveBlob(blob, filename);
+  }
+  else {
+    const elem = window.document.createElement('a');
+    elem.href = window.URL.createObjectURL(blob);
+    elem.download = filename;
+    document.body.appendChild(elem);
+    elem.click();
+    document.body.removeChild(elem);
+  }
+}
 
 export default function Home({ data }) {
   const posts = data.allMarkdownRemark.nodes
@@ -26,9 +42,24 @@ export default function Home({ data }) {
           )}
         </FormattedMessage>
       </div>
-      <span className="font-semibold font-sans break-normal pt-6 pb-2 text-xl w-full">
+      <h3 className="font-semibold font-sans break-normal pt-6 pb-2 text-xl w-full">
+        Download Script
+      </h3>
+      <div className="ml-6">
+        <ul className="list-disc">
+          <li>
+            <a className="hover:underline" download href="" onClick={() => { save('cross2Hecras.lsp', LSP.cross2Hecras) }}>
+              cross2hecras.lsp
+          </a>
+          </li>
+          <li>
+            More will be available, please like and subcribe my youtube channel.
+          </li>
+        </ul>
+      </div>
+      <h3 className="font-semibold font-sans break-normal pt-6 pb-2 text-xl w-full">
         <FormattedMessage id="index.recent" defaultMessage="Recent Blog Post" />
-      </span>
+      </h3>
       <div className="flex flex-wrap flex-row my-2 mb-4 mt-4">
         {posts.map(post => {
           let featuredImgFluid =
