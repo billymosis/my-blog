@@ -1,7 +1,6 @@
-export const LSP = {
-  cross2Hecras: `
-(princ "\n\n\nSCRIPT MILIK BILLY MOSIS PRIAMBODO, DILARANG MEMPERJUALBELIKAN SCRIPT INI\n")
-(princ "\n\n Command G1 dan G2, referensi bisa lihat channel youtube saya\n")
+(princ "\nSCRIPT MILIK BILLY MOSIS PRIAMBODO, DILARANG MEMPERJUALBELIKAN SCRIPT INI.\n")
+(princ "\nCommand G1 dan G2, referensi bisa lihat channel youtube saya.\n")
+(princ "\nScript hanya LEGAL Untuk PELAJAR, untuk PROYEK TIDAK.\n")
 (princ "MOHON MEMBELI LISENSI UNTUK MEMPERGUNAKAN SCRIPT INI SECARA LEGAL\nDENGAN GOPAY KE: 085649601601 SEHARGA ROKOK SURYA\n")
 (vl-load-com)
 
@@ -97,5 +96,3 @@ export const LSP = {
   )
   (princ)
 )
-  `
-}
