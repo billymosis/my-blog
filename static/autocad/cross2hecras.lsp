@@ -36,7 +36,7 @@
 		(setq lst (cons val lst))
 		(setq i (1+ i))
       )
-	  (setq res (LM:lst->str lst "\n"))
+	  (setq res (LM:lst->str lst "\r\n"))
 	  (princ res)
 		(vlax-invoke
 			(vlax-get (vlax-get (vlax-create-object "htmlfile") 'ParentWindow) 'ClipBoardData)
