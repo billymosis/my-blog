@@ -1,7 +1,7 @@
 (princ "\nSCRIPT MILIK BILLY MOSIS PRIAMBODO, DILARANG MEMPERJUALBELIKAN SCRIPT INI.\n")
 (princ "\nCommand G1 dan G2, referensi bisa lihat channel youtube saya.\n")
 (princ "\nScript hanya LEGAL Untuk PELAJAR, untuk PROYEK TIDAK.\n")
-(princ "MOHON MEMBELI LISENSI UNTUK MEMPERGUNAKAN SCRIPT INI SECARA LEGAL\nDENGAN GOPAY KE: 085649601601 SEHARGA ROKOK SURYA\n")
+(princ "MOHON MEMBELI LISENSI UNTUK MEMPERGUNAKAN SCRIPT INI SECARA LEGAL\nDENGAN https://trakteer.id/billymosis/tip?quantity=5\n")
 (vl-load-com)
 
 (defun LM:lst->str ( lst del / str )
