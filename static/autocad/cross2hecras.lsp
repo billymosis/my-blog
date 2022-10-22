@@ -1,3 +1,4 @@
+(princ "\nV1.0.0\n")
 (princ "\nSCRIPT MILIK BILLY MOSIS PRIAMBODO, DILARANG MEMPERJUALBELIKAN SCRIPT INI.\n")
 (princ "\nCommand G1 dan G2, referensi bisa lihat channel youtube saya.\n")
 (princ "\nScript hanya LEGAL Untuk PELAJAR, untuk PROYEK TIDAK.\n")
@@ -83,7 +84,7 @@
 			)
 		)
 		(setq resultString (reverse resultString))
-		(setq res (LM:lst->str resultString "\n") )
+		(setq res (LM:lst->str resultString "\r\n") )
 		(vlax-invoke
 			(vlax-get (vlax-get (vlax-create-object "htmlfile") 'ParentWindow) 'ClipBoardData)
 			'setData
